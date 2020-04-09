@@ -15,3 +15,12 @@
 
 # Ignore Byebug command history file.
 .byebug_history
+/.bundle
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+.byebug_history
+public/uploads/*
+.DS_Store
+config/secrets.yml
