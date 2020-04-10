@@ -1,9 +1,7 @@
 Rails.application.routes.draw do
-  get 'likes/index'
-
-  get 'comments/index'
-
-  get 'like/index'
-
-  root to: 'posts#index' 
+  devise_for :users
+  root to: 'users#index' 
+  resources :users, only: [:index, :new, :show, :edit, :update]
+  resources :app, only: :index
+  resources :posts, only: [:index, :new, :show, :edit, :update]
 end
