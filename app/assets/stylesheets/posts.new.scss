@@ -1,0 +1,39 @@
+.main{
+  background-image: url("/images/annie-spratt-n42ogaQn32o-unsplash.jpg");
+  background-size: cover;
+  $green: #84AD47;
+  .description{
+    text-align: center;
+    
+  }
+  .form {
+    width: 50%;
+    margin: 10% auto;
+    min-width: 9rem;
+    input, textarea {
+      float: left;
+      width: 100%;
+      max-width: 100%;
+      border: none;
+      margin: 0.5rem 0;
+      padding: 0.5rem 1rem;
+      border-radius: 0.3rem;
+      background: darken(#f9f9f9, 10%);
+      color: darken(#f9f9f9, 50%);
+      height: 2.5rem;
+      opacity: 0.9;
+    
+      &[type=submit] {
+        background: $green;
+        color: #fff;
+        width: auto;
+        float: right; 
+      }
+    }
+  }
+  
+  // Generic Styles ;)
+  * {
+    box-sizing: border-box;
+  }
+}

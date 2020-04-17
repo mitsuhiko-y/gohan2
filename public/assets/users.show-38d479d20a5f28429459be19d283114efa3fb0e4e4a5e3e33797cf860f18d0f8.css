@@ -1,0 +1,47 @@
+/* line 2, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/users.show.scss */
+.wrapper {
+  background-image: url("/images/dan-gold-tlQebgkU1dI-unsplash.jpg");
+  background-size: cover;
+}
+/* line 5, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/users.show.scss */
+.wrapper a {
+  color: black;
+}
+/* line 8, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/users.show.scss */
+.wrapper .upper {
+  display: flex;
+  justify-content: space-around;
+}
+/* line 12, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/users.show.scss */
+.wrapper .upper .profile .image {
+  margin-bottom: 20px;
+}
+/* line 16, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/users.show.scss */
+.wrapper .upper .profile .name {
+  margin-bottom: 20px;
+}
+/* line 20, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/users.show.scss */
+.wrapper .upper .profile .posts-count {
+  margin-bottom: 20px;
+}
+/* line 23, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/users.show.scss */
+.wrapper .upper .profile .likes-count {
+  margin-bottom: 20px;
+}
+/* line 26, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/users.show.scss */
+.wrapper .upper .profile .liked-posts {
+  margin-bottom: 20px;
+}
+/* line 30, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/users.show.scss */
+.wrapper .upper .edit {
+  margin-top: 100px;
+}
+/* line 36, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/users.show.scss */
+.wrapper .footer .post-index {
+  text-align: center;
+  margin-top: 100px;
+}
+/* line 39, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/users.show.scss */
+.wrapper .footer .post-index__shopname {
+  margin-top: 50px;
+}

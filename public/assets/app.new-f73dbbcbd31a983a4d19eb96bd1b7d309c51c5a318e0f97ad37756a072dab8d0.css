@@ -1,0 +1,36 @@
+/* line 1, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/app.new.scss */
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  background-image: url("/images/eniko-kis-iu9FOHSQ8Z8-unsplash.jpg");
+  background-size: cover;
+}
+/* line 7, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/app.new.scss */
+.wrapper .main {
+  background-size: cover;
+}
+/* line 9, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/app.new.scss */
+.wrapper .main h {
+  margin-left: 30px;
+  color: gray;
+  font-size: 50px;
+}
+/* line 14, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/app.new.scss */
+.wrapper .main ul {
+  margin-left: 50px;
+}
+/* line 16, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/app.new.scss */
+.wrapper .main ul li {
+  font-variant: all-small-caps;
+  font-size: x-large;
+  font-size: 25px;
+}
+/* line 21, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/app.new.scss */
+.wrapper .main ul a {
+  margin-left: 30px;
+  margin-top: 30px;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 20px;
+  color: black;
+}

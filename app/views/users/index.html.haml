@@ -1,1 +1,147 @@
-%h おいしいをシェアしよう
+
+!!!
+%html{:lang => "ja"}
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:charset => "UTF-8"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %title Document
+    %link{:crossorigin => "anonymous", :href => "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css", :integrity => "sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh", :rel => "stylesheet"}/
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag    'users.index', media: 'all', 'data-turbolinks-track': 'reload'
+    
+  %body
+    .main
+      .container-fluid
+
+        #carousel-card.carousel.slide{"data-interval" => "5000", "data-ride" => "carousel"}
+          .carousel-inner        
+            .carousel-item.px-5.mt-5.active
+
+              .row
+                .card-wrap.card-pc.col-4
+                  .card
+                    %a{:href => "/areas/151"}
+                      .iframe-card-wrap
+                        %img{:allowfullscreen => "", :frameborder => "0", :height => "600", :src => "#{@lastpost.image}", :style => "margin-top:-80px;", :width => "600px"}
+                      .card-overlay
+                        %p
+                          投稿者 : zzz
+
+                .card-wrap.card-pc.col-4
+                  .index-heart-wrap
+                    %i.fas.fa-heart
+                    0
+                  .card
+                    %a{:href => "/areas/151"}
+                      .iframe-card-wrap
+                        %img{:allowfullscreen => "", :frameborder => "0", :height => "600", :src => "#{@secondlastpost.image}", :style => "margin-top:-80px;", :width => "600px"}
+                      .card-overlay
+                        %p
+                          z
+                          %br>/
+                          投稿者 : zzz
+
+                .card-wrap.card-pc.col-4
+                  .index-heart-wrap
+                    %i.fas.fa-heart
+                    0
+                  .card
+                    %a{:href => "/areas/151"}
+                      .iframe-card-wrap
+                        %img{:allowfullscreen => "", :frameborder => "0", :height => "600", :src => "#{@thirdlastpost.image}", :style => "margin-top:-80px;", :width => "600px"}
+                      .card-overlay
+                        %p
+                          z
+                          %br>/
+                          投稿者 : zzz
+              
+            .carousel-item.px-5.mt-5
+
+              .row
+                .card-wrap.card-pc.col-4
+                  .index-heart-wrap
+                    %i.fas.fa-heart
+                    0
+                  .card
+                    %a{:href => "/areas/151"}
+                      .iframe-card-wrap
+                        %img{:allowfullscreen => "", :frameborder => "0", :height => "600", :src => "#{@lastpost.image}", :style => "margin-top:-80px;", :width => "600px"}
+                      .card-overlay
+                        %p
+                          z
+                          %br>/
+                          投稿者 : zzz
+
+                .card-wrap.card-pc.col-4
+                  .index-heart-wrap
+                    %i.fas.fa-heart
+                    0
+                  .card
+                    %a{:href => "/areas/151"}
+                      .iframe-card-wrap
+                        %img{:allowfullscreen => "", :frameborder => "0", :height => "600", :src => "#{@secondlastpost.image}", :style => "margin-top:-80px;", :width => "600px"}
+                      .card-overlay
+                        %p
+                          z
+                          %br>/
+                          投稿者 : zzz
+
+                .card-wrap.card-pc.col-4
+                  .index-heart-wrap
+                    %i.fas.fa-heart
+                    0
+                  .card
+                    %a{:href => "/areas/151"}
+                      .iframe-card-wrap
+                        %img{:allowfullscreen => "", :frameborder => "0", :height => "600", :src => "#{@thirdlastpost.image}", :style => "margin-top:-80px;", :width => "600px"}
+                      .card-overlay
+                        %p
+                          z
+                          %br>/
+                          投稿者 : zzz
+
+        %a.carousel-control-prev{"data-slide" => "prev", :href => "#carouselExampleFade", :role => "button"}
+          %span.carousel-control-prev-icon{"aria-hidden" => "true"}
+          %span.sr-only Previous
+        %a.carousel-control-next{"data-slide" => "next", :href => "#carouselExampleFade", :role => "button"}
+          %span.carousel-control-next-icon{"aria-hidden" => "true"}
+          %span.sr-only Next
+
+        .posts-index
+
+          %h1.d-flex.justify-content-between
+            %i.fas.fa-history>
+            過去の投稿
+            %span.other-right
+              %span#new 新着順
+              \/
+              %span#like いいね順
+
+          .posts
+            - @posts.each do |post|
+              .a-post              
+                .a-post__shopname
+                  = link_to "#{post.shopname}",post_path(post)          
+                .a-post__sender
+                  = "投稿者：#{post.user.nickname}"
+
+        %nav{"aria-label" => "Page navigation example"}
+          %ul.pagination
+            %li.page-item
+              %a.page-link{:href => "#"} Previous
+            %li.page-item
+              %a.page-link{:href => "#"} 1
+            %li.page-item
+              %a.page-link{:href => "#"} 2
+            %li.page-item
+              %a.page-link{:href => "#"} 3
+            %li.page-item
+              %a.page-link{:href => "#"} Next
+
+            
+      %script{:crossorigin => "anonymous", :integrity => "sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n", :src => "https://code.jquery.com/jquery-3.4.1.slim.min.js"}
+      %script{:crossorigin => "anonymous", :integrity => "sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo", :src => "https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"}
+      %script{:crossorigin => "anonymous", :integrity => "sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6", :src => "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"}
+
+

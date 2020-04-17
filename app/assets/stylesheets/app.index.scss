@@ -1,0 +1,20 @@
+.wrapper{
+  background-image: url("/images/frank-r-a555bTdDLbM-unsplash.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+
+
+  .main{
+    position: relative;
+    h{
+      position: absolute;
+      margin-top:20px;
+      margin-left: 20px;
+      font-size: 20px;
+      font:inherit
+    }
+
+  }
+  
+}

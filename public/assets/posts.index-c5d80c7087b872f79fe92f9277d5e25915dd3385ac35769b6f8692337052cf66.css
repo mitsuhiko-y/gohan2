@@ -1,0 +1,9 @@
+/* line 1, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.index.scss */
+.main {
+  background-image: url("/images/joanna-kosinska-Prfs32wh-o4-unsplash.jpg");
+  background-size: cover;
+}
+/* line 5, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.index.scss */
+.main .main a {
+  color: black;
+}

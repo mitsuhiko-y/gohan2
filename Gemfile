@@ -55,7 +55,10 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'haml-rails'
 gem 'pry-rails'
 gem 'carrierwave'
-gem 'mini_magick'
+gem 'rmagick'
 gem 'unicorn', '5.4.1'
 gem 'fog-aws'
 gem 'devise'
+gem "jquery-ui-rails"
+gem 'font-awesome-sass', '~> 5.4.1'
+gem 'kaminari'

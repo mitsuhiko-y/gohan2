@@ -1,0 +1,9 @@
+コメントの編集ページ
+
+.edit-form
+  = form_for @comment, url: post_comment_path(@post, @comment), method: :patch do |f|
+    = f.text_field :content, class: 'content', placeholder: 'コメントを書いてください', rows: "3"
+    = f.submit 'Send', class: 'form__submit'
+
+.destroy
+  = link_to "コメントを削除する", post_comment_path(@post, @comment), method: :delete

@@ -8,8 +8,11 @@ class User < ApplicationRecord
   validates :email, presence: true, uniqueness: true
   validates :password, presence: true
 
-  has_many :posts
-  has_many :comments
-  has_many :likes
-  
+  has_many :posts,                           dependent: :destroy
+  has_many :comments, foreign_key: :user_id, dependent: :destroy
+  has_many :likes,    foreign_key: :user_id, dependent: :destroy
+  has_many :liked_posts, through: :likes, source: :post
+  def already_liked?(post)
+    self.likes.exists?(post_id: post.id)
+  end
 end

@@ -1,14 +1,11 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Gohan2
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag    'app.index', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
 
-%h GoFunとは
-
-%ul
-  %li GoFunは、ごはんスポット投稿型SNSです。
-
-  %li あなたのおススメごはんスポットを「Googleストリートビュー」を用いて投稿し、世界中のユーザーへ共有することができます。
-  
-  %li また、他のユーザーが投稿したエリアを見たり、コメントやいいねを付けて楽しむこともできます。
-
-  %li さぁ、あなたも新感覚のSNSを覗いてみませんか...？
-
-  = link_to "新規登録", new_user_registration_path
-    
+%h おいしいをシェアしよう

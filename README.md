@@ -39,7 +39,7 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |shopname|string|null: false|
-|view|string|null: false|
+|view|text|null: false|
 |content|text|null: false|
 |image|string||
 ### Association

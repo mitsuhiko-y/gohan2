@@ -1,0 +1,9 @@
+/* line 2, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.show.scss */
+.wrapper {
+  background-image: url("/images/dan-gold-tlQebgkU1dI-unsplash.jpg");
+  background-size: cover;
+}
+/* line 5, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.show.scss */
+.wrapper a {
+  color: black;
+}

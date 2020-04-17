@@ -1,0 +1,112 @@
+
+.wrapper{
+  background-image: url("/images/dan-gold-tlQebgkU1dI-unsplash.jpg");
+  background-size: cover;
+  min-height: 200vh;
+  background-attachment: fixed;
+  background-position: center;
+  a{
+    color: black;
+  }
+  .upper{
+    display: flex;
+    justify-content: space-around;
+    .profile{
+      .image{
+        margin-bottom: 20px;
+
+      }
+      .name{
+        margin-bottom: 20px;
+
+      }
+      .posts-count{
+        margin-bottom: 20px;
+      }
+      .likes-count{
+        margin-bottom: 20px;
+      }
+      .liked-posts{
+        margin-bottom: 20px;
+      }
+    }
+    .edit{
+      margin-top:100px;
+    }
+
+  }
+  .footer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    .posts-index{
+      display: flex;
+      justify-content: center;
+      margin-top: 100px;
+      width: 80%;
+      .table{
+        width: 80%;
+        font-size:25px;
+        a{
+          width: 100%;
+          text-decoration: none;
+          color: black; 
+        }
+        .fas{
+          color:red;
+        }
+        .sender{
+          width: 25px;
+          font-size: 20px;
+        }
+      }
+    }
+    .pages{
+      .pagination{
+        justify-content: center;
+        span{
+          margin-right: 20px;
+          font-size: 25px;
+          margin-bottom: 20px;
+          a{
+            color: black;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+
+  // .upper
+  //   .profile
+  //     .image
+  //       写真
+  //       = image_tag src="#{@user.image}", size: "49x20"
+  //     .name
+  //       ニックネーム
+  //       = @user.nickname
+  //     .posts-count
+  //       投稿数
+  //       = @user.posts.length
+  //     .likes-count
+  //       いいねした数 
+  //       = @user.likes.length
+  //     .liked-posts
+  //       いいねした投稿
+  //       - @user.liked_posts.each do |post|
+  //         =link_to post_path(post) do
+  //           = post.shopname
+  //           = post.user.nickname
+  //   .edit
+  //     - if current_user.id == @user.id
+  //       = link_to "ユーザー編集へのリンク", edit_user_registration_path(current_user.id)
+
+  // .footer
+
+  //   .post-index
+  //     投稿一覧
+  //     - @posts.each do |post|
+  //       .post-index__shopname
+  //         = link_to "#{post.shopname}", post_path(post)

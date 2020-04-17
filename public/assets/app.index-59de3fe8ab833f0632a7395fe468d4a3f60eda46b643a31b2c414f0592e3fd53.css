@@ -1,0 +1,10 @@
+/* line 1, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/app.index.scss */
+.wrapper {
+  background-image: url("/images/jade-seok-7bg49375bVE-unsplash.jpg");
+  background-size: cover;
+}
+/* line 4, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/app.index.scss */
+.wrapper h {
+  font-size: 18px;
+  font: inherit;
+}
