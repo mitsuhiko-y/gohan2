@@ -43,6 +43,7 @@ group :development, :test do
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
   gem 'capistrano3-unicorn'
+  gem 'sqlite3'
 end
 
 group :development do
@@ -67,3 +68,7 @@ gem 'devise'
 gem "jquery-ui-rails"
 gem 'font-awesome-sass', '~> 5.4.1'
 gem 'kaminari'
+
+group :production do
+  gem 'pg'
+end
