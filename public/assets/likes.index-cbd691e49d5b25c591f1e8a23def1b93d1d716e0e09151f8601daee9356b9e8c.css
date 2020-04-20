@@ -1,0 +1,58 @@
+/* line 1, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/likes.index.scss */
+.main {
+  background-image: url("/images/dish.jpg");
+  min-height: 200vh;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  padding-top: 20px;
+}
+/* line 9, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/likes.index.scss */
+.main .posts-index {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+/* line 13, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/likes.index.scss */
+.main .posts-index .table {
+  width: 75rem;
+  font-size: 2rem;
+}
+/* line 16, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/likes.index.scss */
+.main .posts-index .table .like {
+  width: 25%;
+}
+/* line 19, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/likes.index.scss */
+.main .posts-index .table td {
+  width: 50%;
+}
+/* line 22, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/likes.index.scss */
+.main .posts-index .table a {
+  width: 100%;
+  text-decoration: none;
+  color: black;
+  display: inline-block;
+}
+/* line 28, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/likes.index.scss */
+.main .posts-index .table .fas {
+  color: red;
+}
+/* line 31, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/likes.index.scss */
+.main .posts-index .table .sender {
+  width: 25%;
+  font-size: 1.5rem;
+}
+/* line 38, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/likes.index.scss */
+.main .pages .pagination {
+  justify-content: center;
+}
+/* line 40, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/likes.index.scss */
+.main .pages .pagination span {
+  margin-right: 20px;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+/* line 44, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/likes.index.scss */
+.main .pages .pagination span a {
+  color: black;
+}

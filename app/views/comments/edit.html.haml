@@ -1,7 +1,15 @@
-コメントの編集ページ
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Gohan2
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag    'app.new', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application'
 
 .edit-form
-  = form_for @comment, url: post_comment_path(@post, @comment), method: :patch do |f|
+  = form_for [@post, @comment], url:post_comment_path(@post, @comment), method: :put do |f|
     = f.text_field :content, class: 'content', placeholder: 'コメントを書いてください', rows: "3"
     = f.submit 'Send', class: 'form__submit'
 

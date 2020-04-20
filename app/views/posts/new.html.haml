@@ -8,9 +8,6 @@
     = stylesheet_link_tag    'posts.new', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
 
-.description
-  新規投稿ページです。
-
 .form
   = form_for [@post] do |f|
     = f.text_field :shopname, class: 'shopname', placeholder: 'お店の名前'

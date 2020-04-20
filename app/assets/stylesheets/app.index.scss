@@ -1,5 +1,5 @@
 .wrapper{
-  background-image: url("/images/frank-r-a555bTdDLbM-unsplash.jpg");
+  background-image: url("/images/dish&cloth.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -9,10 +9,11 @@
     position: relative;
     h{
       position: absolute;
-      margin-top:20px;
-      margin-left: 20px;
-      font-size: 20px;
-      font:inherit
+      margin-top: 2rem;
+      margin-left: 2rem;
+      font-size: 2.5rem;
+      color: white;
+      font-weight: bold;
     }
 
   }

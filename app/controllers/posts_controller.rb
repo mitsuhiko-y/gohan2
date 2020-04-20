@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_group
+  before_action :move_to_index, except: [:index, :show, :search]
 
   # def initialize(shopname, view, image, content)
   #   @shopname = shopname
@@ -16,8 +17,6 @@ class PostsController < ApplicationController
     @fourthlastpost = Post.last(4)[0]
     @fifthlastpost = Post.last(5)[0]
     @sixthlastpost = Post.last(6)[0]
-
-
   end
 
   def new
@@ -26,26 +25,25 @@ class PostsController < ApplicationController
 
   def create
     Post.create(post_params)
-    redirect_to posts_path, notice: "投稿できました"
-
-    # @post = @user.posts.new(post_params)
-    # if @posts.save
-    #   respond_to do |format|
-    #     format.html { redirect_to posts_path, notice: "投稿できました" }
-    #     format.json
-    #   end
-    # else
-    #   @messages = @group.messages.includes(:user)
-    #   flash.now[:alert] = 'メッセージを入力してください。'
-    #   render :index
-    # end
+    @post = @user.posts.new(post_params)
+    if @post.save
+      redirect_to posts_path, notice: "投稿できました" 
+      # respond_to do |format|
+      #   format.html { redirect_to posts_path, notice: "投稿できました" }
+      #   format.json
+      # end
+    else
+      # @posts = @user.posts.includes(:user)
+      flash.now[:alert] = '足りない項目を入力してください'
+      render :new
+    end
   end
 
   def show
     @post = Post.find(params[:id])
     @comment = Comment.new
-    @comments = @post.comments.includes(:user)
-    @like = Like.new
+    @comments = @post.comments.includes(:user).all.order("created_at DESC").page(params[:page]).per(5)
+
   end
 
   def edit
@@ -55,12 +53,23 @@ class PostsController < ApplicationController
   def update
     @post = Post.find(params[:id])
     @post.update(post_params)
-    redirect_to post_path(@post), notice: "投稿できました"
+
+    if @post.save
+      redirect_to posts_path, notice: "更新できました" 
+      # respond_to do |format|
+      #   format.html { redirect_to posts_path, notice: "投稿できました" }
+      #   format.json
+      # end
+    else
+      # @posts = @user.posts.includes(:user)
+      flash.now[:alert] = '足りない項目を入力してください'
+      render :edit
+    end
   end
 
   def destroy
-    @post = Post.find(params[:id])
-    @post.destroy
+    post = Post.find(params[:id])
+    post.destroy
     redirect_to posts_path, notice: "削除しました"
   end
 
@@ -72,5 +81,11 @@ class PostsController < ApplicationController
 
   def set_group
     @user = User.find_by(params[:user_id])
+  end
+
+  def move_to_index
+    redirect_to root_path unless user_signed_in? && current_user.id = @user.id
+    redirect_to action: :index unless user_signed_in?
+
   end
 end

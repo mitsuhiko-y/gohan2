@@ -5,51 +5,75 @@
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %title Gohan2
     = csrf_meta_tags
+    %link{:crossorigin => "anonymous", :href => "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css", :integrity => "sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh", :rel => "stylesheet"}/
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = stylesheet_link_tag    'posts.show', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
 
 .wrapper
-  .view
-    = @post.view
+  .images
+    .view
+      %iframe{:height => "100%", :width => "300%", :src => "#{@post.view.gsub(/<iframe src="/,'').gsub(/" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">/,'').gsub(/<iframe src="/,'')}"}     
+    
+    .post__image
+      %img{:allowfullscreen => "", :frameborder => "0", :height => "500px", :src => "#{@post.image}", :width => "500px"}
 
   .chat-area
-
-    .post-detail
-      .post__shopname
-        = @post.shopname
-      .post__image
-        = @post.image
-      .post__content
+    .post-side
+      .post-side__title
+        .post__likes
+          -if current_user.already_liked?(@post)
+            = button_to post_like_path(@post), method: :delete do
+              %i.like.fas.fa-heart
+              = "#{@post.likes.count}　　　#{@post.shopname}"
+          -else
+            = button_to post_likes_path(@post) do
+              %i.dislike.far.fa-heart
+              = @post.likes.count
+            = @post.shopname
+   
+      .post-side__content
         = @post.content
-      .post__sender
-        = @post.user.nickname
-      .post__edit
+      .post-side__sender
+        = "by▶︎#{@post.user.nickname}"
+        %br
+          = @post.created_at.strftime("%Y/%m/%d %H:%M")
+      .post-side__edit
         - if current_user.id == @post.user.id
           = link_to "投稿を編集する", edit_post_path(@post)
-      .post__likes
-        いいね件数：
-        = @post.likes.count
-
-    .like-create
-      -if current_user.already_liked?(@post)
-        = button_to 'いいねを取り消す', post_like_path(@post), method: :delete
-      -else
-        = button_to 'いいね', post_likes_path(@post)
-
-    .liked-user
-      -if @post.likes.count > 0
-        いいねしたユーザー
+      .post-side__liked-user
+        いいねしたユーザー▶︎
         - @post.liked_users.each do |user|
-          = user.nickname
+          = "　#{user.nickname}"
 
-    .comment
-      .comment__form
+    .comment-side
+      .comment-side__form
         - if current_user
           = form_for [@post, @comment] do |f|
             = f.text_field :content, class: 'form__message', placeholder: 'コメントを入力してください'
             = f.submit 'Send', class: 'form__submit'
-     
-      .comment__index  
-        - @comments.each do |comment|
-          = link_to "#{comment.content}/#{comment.user.nickname}", edit_post_comment_path(comment.post.id, comment.id)
+
+      .comment-side__index  
+
+        %i.comments.far.fa-comments
+          
+        %table.table.table-hover
+          - @comments.each do |comment|
+
+            %tr{:style=>"height: 80px;"}
+              %td
+                = link_to "#{comment.content}", edit_post_comment_path(comment.post.id, comment.id)
+              %td.sender
+                = "by▶︎#{comment.user.nickname}"
+                %br
+                  = comment.created_at.strftime("%Y/%m/%d %H:%M")
+      
+
+        .pages
+          = paginate(@comments)
+  
+      %script{:crossorigin => "anonymous", :integrity => "sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n", :src => "https://code.jquery.com/jquery-3.4.1.slim.min.js"}
+      %script{:crossorigin => "anonymous", :integrity => "sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo", :src => "https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"}
+      %script{:crossorigin => "anonymous", :integrity => "sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6", :src => "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"}
+
+

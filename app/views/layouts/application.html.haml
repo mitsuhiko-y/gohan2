@@ -5,7 +5,7 @@
     %title Gohan2
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
-    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application'
     
     
   %body
@@ -23,4 +23,5 @@
             = link_to "新規登録", new_user_registration_path
             = link_to "ログインする", new_user_session_path
       .main
+        = render 'layouts/notifications'
         = yield

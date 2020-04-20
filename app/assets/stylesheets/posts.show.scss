@@ -1,10 +1,188 @@
-
 .wrapper{
-  background-image: url("/images/dan-gold-tlQebgkU1dI-unsplash.jpg");
+  background-image: url("/images/milk.jpg");
   background-size: cover;
+  min-height: 240vh;
+  background-attachment: fixed;
+  background-position: center;
+  .images{
+    display: flex;
+    justify-content: space-around;
+    height: 40rem;
+    .view{
+      width: 20rem;
+      margin-right: 38rem;
+      margin-top: 4rem;
+    }
+  }
+    .post__image{
+      width: 10rem;
+      margin-right: 26rem;
+      margin-top: 4rem;
+      img{
+        width: 35rem;
+        height: 35rem;
+      }
+    }
+  .chat-area{
+    .post-side{
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      border: solid;
+      margin: top;
+      margin-top: 50px;
+      &__title{
+        display: flex;
+        justify-content: space-around;
+        width: 70rem;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+        border-bottom: dotted;
+        font-size: 2rem;
+        .post__likes{
+          .button_to{
+            display: inline-block;
+            margin-right: 2rem;
+            button{
+              background-color: transparent;
+              border: none;
+              .like{
+                color: red;
+                font-size: 30px;
+              }
+              .dislike{
+                color:black;
+                font-size: 30px;
+              }
+            }
+          }
+        }
+      }
+      &__content{
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 2rem;
+        width: 70%;
+        height: 10rem;
+        text-align: center;
+      }
+      &__sender{
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 1.5rem;
+        width: 70%;
+        text-align: right;
+      }
+      &__edit{
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 1.5rem;
+        width: 70%;
+        text-align: right;
+      }
+      &__liked-user{
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 2rem;
+        font-size: 1.5rem;
+        width: 70%;
+        text-align: right;
+        margin-top: 2rem;
+      }
+    }
+    .like-side{
+      &__create{
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 25px;
+        width: 70%;
+        text-align: right;
+      }
+      &__user{
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 25px;
+        width: 70%;
+        text-align: right;
+      }
+    }
+    .comment-side{
+      &__form{
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 25px;
+        width: 70%;
+        height: 10rem;
+        text-align: center;
+        .new_comment{
+          margin-top: 3rem;
+          .form__message{
+            width: 70%;
+            height: 3rem;
+          }
+          .form__submit{
+            height: 3rem;
+            width: 5rem;
+          }
+        }
+      }
+      &__index{
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 25px;
+        width: 70%;
+        height: 10rem;
+        text-align: center;
+        .comments{
+          margin-right: 69rem;
+          font-size: 4rem;
+          height: 6rem;          
+        }
+        .table{
+          tbody{
+            tr{
+              height: 9rem;
+              td{
+                width: 60rem;
+                  a{
+                    width: 135%;
+                    display: inline-block;
+                    height: 7rem;
+                    text-decoration: none;
+                  }
+              }
+              .sender{
+                margin-left: auto;
+                margin-right: auto;
+                font-size: 25px;
+                width: 20rem;
+                text-align: right;
+              }
+              
+            }
+
+          }
+        }
+        
+        .pages{
+          .pagination{
+            justify-content: center;
+            span{
+              margin-right: 20px;
+              font-size: 25px;
+              margin-bottom: 20px;
+              a{
+                color: black;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
   a{
     color: black;
   }
- 
-
 }

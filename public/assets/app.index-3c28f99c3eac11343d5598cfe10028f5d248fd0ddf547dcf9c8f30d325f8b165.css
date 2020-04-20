@@ -1,0 +1,19 @@
+/* line 1, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/app.index.scss */
+.wrapper {
+  background-image: url("/images/frank-r-a555bTdDLbM-unsplash.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+/* line 8, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/app.index.scss */
+.wrapper .main {
+  position: relative;
+}
+/* line 10, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/app.index.scss */
+.wrapper .main h {
+  position: absolute;
+  margin-top: 20px;
+  margin-left: 20px;
+  font-size: 20px;
+  font: inherit;
+}

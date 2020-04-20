@@ -1,0 +1,70 @@
+/* line 1, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.index.scss */
+.main {
+  background-image: url("/images/dish.jpg");
+  min-height: 200vh;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  padding-top: 20px;
+}
+/* line 10, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.index.scss */
+.main .carousel-inner .card {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  border: none;
+}
+/* line 16, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.index.scss */
+.main .carousel-inner img {
+  border-radius: 50%;
+}
+/* line 18, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.index.scss */
+.main .carousel-inner img .iframe-card-wrap {
+  width: 50%;
+  height: 50%;
+}
+/* line 23, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.index.scss */
+.main .carousel-inner .fas {
+  color: red;
+  font-size: 30px;
+}
+/* line 28, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.index.scss */
+.main .posts-index {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+/* line 32, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.index.scss */
+.main .posts-index .table {
+  width: 80%;
+  font-size: 25px;
+}
+/* line 35, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.index.scss */
+.main .posts-index .table a {
+  width: 100%;
+  text-decoration: none;
+  color: black;
+}
+/* line 40, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.index.scss */
+.main .posts-index .table .fas {
+  color: red;
+}
+/* line 43, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.index.scss */
+.main .posts-index .table .sender {
+  width: 25px;
+  font-size: 20px;
+}
+/* line 50, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.index.scss */
+.main .pages .pagination {
+  justify-content: center;
+}
+/* line 52, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.index.scss */
+.main .pages .pagination span {
+  margin-right: 20px;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+/* line 56, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.index.scss */
+.main .pages .pagination span a {
+  color: black;
+}

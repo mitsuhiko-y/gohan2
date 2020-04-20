@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   before_action :set_group
-  
+  before_action :move_to_index, except: [:index, :show, :search]
+
   def index
     @users = User.all
     # return nil if params[:keyword] == ""
@@ -33,10 +34,14 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :email)
+    params.require(:user).permit(:name, :email, :image, :image_cache)
   end
 
   def set_group
     @post = Post.find_by(params[:post_id])
+  end
+
+  def move_to_index
+    redirect_to root_path unless user_signed_in?
   end
 end

@@ -9,4 +9,6 @@ class Post < ApplicationRecord
   has_many :liked_users, through: :likes, source: :user
 
   mount_uploader :image, ImageUploader
+
+  
 end

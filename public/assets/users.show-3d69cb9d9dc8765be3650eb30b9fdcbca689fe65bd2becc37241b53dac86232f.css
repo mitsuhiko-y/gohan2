@@ -1,0 +1,88 @@
+/* line 2, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/users.show.scss */
+.wrapper {
+  background-image: url("/images/cup.jpg");
+  background-size: cover;
+  min-height: 160vh;
+  background-attachment: fixed;
+  background-position: center;
+}
+/* line 8, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/users.show.scss */
+.wrapper a {
+  color: black;
+}
+/* line 11, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/users.show.scss */
+.wrapper .upper {
+  display: flex;
+  justify-content: space-around;
+}
+/* line 15, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/users.show.scss */
+.wrapper .upper .profile .image {
+  margin-bottom: 20px;
+}
+/* line 19, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/users.show.scss */
+.wrapper .upper .profile .name {
+  margin-bottom: 20px;
+}
+/* line 23, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/users.show.scss */
+.wrapper .upper .profile .posts-count {
+  margin-bottom: 20px;
+}
+/* line 26, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/users.show.scss */
+.wrapper .upper .profile .likes-count {
+  margin-bottom: 20px;
+}
+/* line 29, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/users.show.scss */
+.wrapper .upper .profile .liked-posts {
+  margin-bottom: 20px;
+}
+/* line 33, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/users.show.scss */
+.wrapper .upper .edit {
+  margin-top: 100px;
+}
+/* line 38, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/users.show.scss */
+.wrapper .footer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+/* line 42, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/users.show.scss */
+.wrapper .footer .posts-index {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  width: 80%;
+}
+/* line 47, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/users.show.scss */
+.wrapper .footer .posts-index .table {
+  width: 80%;
+  font-size: 25px;
+}
+/* line 50, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/users.show.scss */
+.wrapper .footer .posts-index .table a {
+  width: 100%;
+  text-decoration: none;
+  color: black;
+}
+/* line 55, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/users.show.scss */
+.wrapper .footer .posts-index .table .fas {
+  color: red;
+}
+/* line 58, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/users.show.scss */
+.wrapper .footer .posts-index .table .sender {
+  width: 25px;
+  font-size: 20px;
+}
+/* line 65, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/users.show.scss */
+.wrapper .footer .pages .pagination {
+  justify-content: center;
+}
+/* line 67, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/users.show.scss */
+.wrapper .footer .pages .pagination span {
+  margin-right: 20px;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+/* line 71, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/users.show.scss */
+.wrapper .footer .pages .pagination span a {
+  color: black;
+}

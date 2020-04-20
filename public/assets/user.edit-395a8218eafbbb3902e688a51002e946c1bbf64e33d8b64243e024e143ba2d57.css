@@ -1,0 +1,39 @@
+/* line 1, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/user.edit.scss */
+.wrapper {
+  background-image: url("/images/redthankyou.jpg");
+  background-size: cover;
+}
+/* line 4, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/user.edit.scss */
+.wrapper .form {
+  width: 40%;
+  margin: 10% auto;
+  min-width: 9rem;
+  margin-left: 30px;
+}
+/* line 9, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/user.edit.scss */
+.wrapper .form input, .wrapper .form textarea {
+  float: left;
+  width: 70%;
+  max-width: 100%;
+  border: none;
+  margin: 0.5rem 0;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  background: #e0e0e0;
+  color: #7a7a7a;
+  height: 2.5rem;
+  opacity: 0.9;
+}
+/* line 22, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/user.edit.scss */
+.wrapper .form .field-remember {
+  width: 20%;
+}
+/* line 25, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/user.edit.scss */
+.wrapper .form .actions {
+  width: 30%;
+}
+/* line 27, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/user.edit.scss */
+.wrapper .form .actions input {
+  background-color: gray;
+  color: white;
+}

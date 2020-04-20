@@ -124,9 +124,9 @@
                 %td
                   = link_to "#{post.shopname}", post_path(post)
                 %td.sender
-                  投稿者
-                  %br 
-                    = "#{post.user.nickname}"
+                  = "by▶︎#{post.user.nickname}"
+                  %br
+                    = post.created_at.strftime("%Y/%m/%d %H:%M")
 
         .pages
           = paginate(@posts)
