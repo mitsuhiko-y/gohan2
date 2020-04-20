@@ -1,0 +1,53 @@
+@charset "UTF-8";
+/* line 1, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.new.scss */
+.main {
+  background-image: url("/images/knives.jpg");
+  background-size: cover;
+  min-height: 100％％;
+  background-attachment: fixed;
+  background-position: center;
+}
+/* line 9, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.new.scss */
+.main .description {
+  text-align: center;
+}
+/* line 13, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.new.scss */
+.main .form {
+  width: 50%;
+  margin: 10% auto;
+  min-width: 9rem;
+}
+/* line 17, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.new.scss */
+.main .form input, .main .form textarea {
+  float: left;
+  width: 100%;
+  height: -12rem;
+  max-width: 100%;
+  border: none;
+  margin: 0.5rem 0;
+  padding: 0.5rem 1rem;
+  background-color: white;
+  border-radius: 0.3rem;
+  /* background: #e0e0e0; */
+  color: #7a7a7a;
+  height: 2.5rem;
+  opacity: 0.9;
+  display: inline-block;
+  height: 4rem;
+  font-size: 1.3rem;
+}
+/* line 35, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.new.scss */
+.main .form input[type=submit], .main .form textarea[type=submit] {
+  background: gray;
+  color: #fff;
+  width: 60rem;
+  float: right;
+}
+/* line 42, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.new.scss */
+.main .form .content {
+  height: 8rem;
+}
+/* line 48, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.new.scss */
+.main * {
+  box-sizing: border-box;
+}
