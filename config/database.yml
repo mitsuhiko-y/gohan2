@@ -60,7 +60,7 @@ default: &default
 production:
   <<: *default
   database: heroku_6a85b4323096927
-  username: bd8863f5815668
+  username: adffdadf2341
   host: us-cdbr-iron-east-01.cleardb.net
-  password: f0887b5c
+  password: adf4234
   socket: /var/lib/mysql/mysql.sock
