@@ -19,91 +19,121 @@
 
               .row
                 .card-wrap.card-pc.col-4
-                  .index-heart-wrap
-                    %i.fas.fa-heart
-                    = "#{@lastpost.likes.count}"
-                  .card
-                    %a{:href => "/posts/#{@lastpost.id}"}
-                      .iframe-card-wrap
-                        %img{:allowfullscreen => "", :frameborder => "0", :height => "500px", :src => "#{@lastpost.image}", :width => "500px"}
+                  -if @posts.count >= 1
+                    .index-heart-wrap
+                      %i.fas.fa-heart
+                      = "#{@lastpost.likes.count}"
+                    .card
+                      %a{:href => "/posts/#{@lastpost.id}"}
+                        .iframe-card-wrap
+                          %img{:allowfullscreen => "", :frameborder => "0", :height => "500px", :src => "#{@lastpost.image}", :width => "500px"}
+                          .card-overlay
+                            %p
+                              = @lastpost.shopname
+                              %br>/
+                              = "投稿者 : #{@lastpost.user.nickname}"
+                  -else
+                    まだ投稿がありません
+                    %img{alt: "写真", height: "500", src: "/images/no_image.jpg", width: "500"}
+
+                .card-wrap.card-pc.col-4
+                  -if @posts.count >= 2
+                    .index-heart-wrap
+                      %i.fas.fa-heart
+                      = "#{@secondlastpost.likes.count}"
+                    .card
+                      %a{:href => "/posts/#{@secondlastpost.id}"}
+                        .iframe-card-wrap
+                          %img{:allowfullscreen => "", :frameborder => "0", :height => "500", :src => "#{@secondlastpost.image}", :width => "500px"}
                         .card-overlay
                           %p
-                            = @lastpost.shopname
+                            = @secondlastpost.shopname
                             %br>/
-                            = "投稿者 : #{@lastpost.user.nickname}"
+                            = "投稿者 : #{@secondlastpost.user.nickname}"
+                  -else
+                    まだ投稿がありません
+                    %img{alt: "写真", height: "500", src: "/images/no_image.jpg", width: "500"}
+
+
 
                 .card-wrap.card-pc.col-4
-                  .index-heart-wrap
-                    %i.fas.fa-heart
-                    = "#{@secondlastpost.likes.count}"
-                  .card
-                    %a{:href => "/posts/#{@secondlastpost.id}"}
-                      .iframe-card-wrap
-                        %img{:allowfullscreen => "", :frameborder => "0", :height => "500", :src => "#{@secondlastpost.image}", :width => "500px"}
-                      .card-overlay
-                        %p
-                          = @secondlastpost.shopname
-                          %br>/
-                          = "投稿者 : #{@secondlastpost.user.nickname}"
-
-                .card-wrap.card-pc.col-4
-                  .index-heart-wrap
-                    %i.fas.fa-heart
-                    = "#{@thirdlastpost.likes.count}"
-                  .card
-                    %a{:href => "/posts/#{@thirdlastpost.id}"}
-                      .iframe-card-wrap
-                        %img{:allowfullscreen => "", :frameborder => "0", :height => "500", :src => "#{@thirdlastpost.image}", :width => "500px"}
-                      .card-overlay
-                        %p
-                          = @thirdlastpost.shopname
-                          %br>/
-                          = "投稿者 : #{@thirdlastpost.user.nickname}"
+                  -if @posts.count >= 3
+                    .index-heart-wrap
+                      %i.fas.fa-heart
+                      = "#{@thirdlastpost.likes.count}"
+                    .card
+                      %a{:href => "/posts/#{@thirdlastpost.id}"}
+                        .iframe-card-wrap
+                          %img{:allowfullscreen => "", :frameborder => "0", :height => "500", :src => "#{@thirdlastpost.image}", :width => "500px"}
+                        .card-overlay
+                          %p
+                            = @thirdlastpost.shopname
+                            %br>/
+                            = "投稿者 : #{@thirdlastpost.user.nickname}"
+                  -else
+                    まだ投稿がありません
+                    %img{alt: "写真", height: "500", src: "/images/no_image.jpg", width: "500"}
               
             .carousel-item.px-5.mt-5
 
               .row
                 .card-wrap.card-pc.col-4
-                  .index-heart-wrap
-                    %i.fas.fa-heart
-                    = "#{@fourthlastpost.likes.count}"
-                  .card
-                    %a{:href => "/posts/#{@fourthlastpost.id}"}
-                      .iframe-card-wrap
-                        %img{:allowfullscreen => "", :frameborder => "0", :height => "500", :src => "#{@fourthlastpost.image}", :width => "500px"}
-                      .card-overlay
-                        %p
-                          = @fourthlastpost.shopname
-                          %br>/
-                          = "投稿者 : #{@fourthlastpost.user.nickname}"
+                  -if @posts.count >= 4
+                    .index-heart-wrap
+                      %i.fas.fa-heart
+                      = "#{@fourthlastpost.likes.count}"
+                    .card
+                      %a{:href => "/posts/#{@fourthlastpost.id}"}
+                        .iframe-card-wrap
+                          %img{:allowfullscreen => "", :frameborder => "0", :height => "500", :src => "#{@fourthlastpost.image}", :width => "500px"}
+                        .card-overlay
+                          %p
+                            = @fourthlastpost.shopname
+                            %br>/
+                            = "投稿者 : #{@fourthlastpost.user.nickname}"
+                  -else
+                    まだ投稿がありません
+                    %img{alt: "写真", height: "500", src: "/images/no_image.jpg", width: "500"}
 
                 .card-wrap.card-pc.col-4
-                  .index-heart-wrap
-                    %i.fas.fa-heart
-                    = "#{@fifthlastpost.likes.count}"
-                  .card
-                    %a{:href => "/posts/#{@fifthlastpost.id}"}
-                      .iframe-card-wrap
-                        %img{:allowfullscreen => "", :frameborder => "0", :height => "500", :src => "#{@fifthlastpost.image}", :width => "500px"}
-                      .card-overlay
-                        %p
-                          = @fifthlastpost.shopname
-                          %br>/
-                          = "投稿者 : #{@fifthlastpost.user.nickname}"
+                  -if @posts.count >= 5
+
+                    .index-heart-wrap
+                      %i.fas.fa-heart
+                      = "#{@fifthlastpost.likes.count}"
+                    .card
+                      %a{:href => "/posts/#{@fifthlastpost.id}"}
+                        .iframe-card-wrap
+                          %img{:allowfullscreen => "", :frameborder => "0", :height => "500", :src => "#{@fifthlastpost.image}", :width => "500px"}
+                        .card-overlay
+                          %p
+                            = @fifthlastpost.shopname
+                            %br>/
+                            = "投稿者 : #{@fifthlastpost.user.nickname}"
+                  -else
+                    まだ投稿がありません
+                    %img{alt: "写真", height: "500", src: "/images/no_image.jpg", width: "500"}
+
 
                 .card-wrap.card-pc.col-4
-                  .index-heart-wrap
-                    %i.fas.fa-heart
-                    = "#{@sixthlastpost.likes.count}"
-                  .card
-                    %a{:href => "/posts/#{@sixthlastpost.id}"}
-                      .iframe-card-wrap
-                        %img{:allowfullscreen => "", :frameborder => "0", :height => "500", :src => "#{@sixthlastpost.image}", :width => "500px"}
-                      .card-overlay
-                        %p
-                          = @sixthlastpost.shopname
-                          %br>/
-                          = "投稿者 : #{@sixthlastpost.user.nickname}"
+                  -if @posts.count >= 6
+
+                    .index-heart-wrap
+                      %i.fas.fa-heart
+                      = "#{@sixthlastpost.likes.count}"
+                    .card
+                      %a{:href => "/posts/#{@sixthlastpost.id}"}
+                        .iframe-card-wrap
+                          %img{:allowfullscreen => "", :frameborder => "0", :height => "500", :src => "#{@sixthlastpost.image}", :width => "500px"}
+                        .card-overlay
+                          %p
+                            = @sixthlastpost.shopname
+                            %br>/
+                            = "投稿者 : #{@sixthlastpost.user.nickname}"
+                  -else
+                    まだ投稿がありません
+                    %img{alt: "写真", height: "500", src: "/images/no_image.jpg", width: "500"}
+
 
           %a.carousel-control-prev{"data-slide" => "prev", :href => "#carouselExampleFade", :role => "button"}
             %span.carousel-control-prev-icon{"aria-hidden" => "true"}
