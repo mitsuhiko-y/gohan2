@@ -20,8 +20,8 @@
             -if @user.image?
               = image_tag "#{@user.image}", alt: "プロフィール写真", width: "300px"
             -else
-              no image
-              %i.fas.fa-portrait
+              = image_tag "/images/no_image.jpg", alt: "no image", width: "300px"
+
           .datas
             .name
               - if current_user.id == @user.id
