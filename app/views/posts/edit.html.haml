@@ -23,4 +23,4 @@
     = f.submit 'Send', class: 'form__submit'
 
 .destroy
-  = link_to "投稿を削除する", post_path(@post), method: :delete 
+  = link_to "投稿を削除する", post_path(@post), method: :delete, data: { confirm: "投稿を削除してもよろしいですか？\n（一度削除すると復元できません）" }
