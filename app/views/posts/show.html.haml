@@ -50,7 +50,7 @@
       .comment-side__form
         - if current_user
           = form_for [@post, @comment], remote: true do |f|
-            = f.text_field :content, class: 'form__message', placeholder: 'コメントを入力してください'
+            = f.text_field :content, class: 'form__message', placeholder: 'コメントを送ってみましょう'
             = f.submit 'Send', class: 'form__submit'
 
       .comment-side__index  

@@ -1,56 +1,52 @@
 .wrapper{
   background-image: url("/images/milk.jpg");
   background-size: cover;
-  min-height: 240vh;
+  min-height: 200vh;
   background-attachment: fixed;
   background-position: center;
   .images{
     display: flex;
-    justify-content: space-around;
-    height: 40rem;
+    justify-content: space-between;
+    padding: 10px;
     .view{
-      width: 20rem;
-      margin-right: 38rem;
-      margin-top: 4rem;
+      iframe{
+        border-radius: 5px;
+      }
     }
   }
     .post__image{
-      width: 10rem;
-      margin-right: 26rem;
-      margin-top: 4rem;
       img{
-        width: 35rem;
-        height: 35rem;
+        border-radius: 5px;
       }
     }
   .chat-area{
     .post-side{
-      width: 80%;
+      width: 70%;
+      height: auto;
       margin-left: auto;
       margin-right: auto;
       border: solid;
       margin: top;
       margin-top: 50px;
+      border-radius: 10px;
+      
+
       &__title{
         display: flex;
-        justify-content: space-around;
-        width: 70rem;
-        margin-top: 2rem;
-        margin-bottom: 1rem;
-        margin-left: auto;
-        margin-right: auto;
+        justify-content: space-around;   
         border-bottom: dotted;
-        font-size: 2rem;
+        font-size: 20px;
+        padding: 12px;
+
         .post__likes{
           .button_to{
             display: inline-block;
-            margin-right: 2rem;
             button{
               background-color: transparent;
               border: none;
               .like{
                 color: red;
-                font-size: 30px;
+                font-size: 20px;
               }
               .dislike{
                 color:black;
@@ -61,35 +57,28 @@
         }
       }
       &__content{
-        margin-left: auto;
-        margin-right: auto;
-        font-size: 2rem;
-        width: 70%;
-        height: 10rem;
+
+        font-size: 20px;
         text-align: center;
+        padding: 12px;
       }
       &__sender{
-        margin-left: auto;
-        margin-right: auto;
-        font-size: 1.5rem;
-        width: 70%;
+        font-size: 18px;
         text-align: right;
+        padding: 12px;
       }
       &__edit{
-        margin-left: auto;
-        margin-right: auto;
-        font-size: 1.5rem;
-        width: 70%;
+        font-size: 18px;
         text-align: right;
+        padding: 13px;
+        a{
+          text-decoration: underline;
+        }
       }
       &__liked-user{
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 2rem;
-        font-size: 1.5rem;
-        width: 70%;
+        font-size: 18px;
         text-align: right;
-        margin-top: 2rem;
+        padding: 13px;
       }
     }
     .like-side{
@@ -114,51 +103,67 @@
         margin-right: auto;
         font-size: 25px;
         width: 70%;
-        height: 10rem;
         text-align: center;
+        
         .new_comment{
-          margin-top: 3rem;
+          margin-top: 20px;
           .form__message{
-            width: 70%;
-            height: 3rem;
+            width: 89%;
+            height: 50px;
+            border-radius: 5px;
+            font-size: 20px;
+
+
           }
           .form__submit{
-            height: 3rem;
-            width: 5rem;
+            height: 50px;
+            width: 10%;
+            border-radius: 5px;
+            background-color: gray;
+            color: white;
           }
         }
       }
       &__index{
         margin-left: auto;
         margin-right: auto;
-        font-size: 25px;
-        width: 70%;
-        height: 10rem;
+        font-size: 20px;
+        width: 55%;
+        height: auto;
         text-align: center;
+        padding-top: 20px;
         .comments{
-          margin-right: 69rem;
-          font-size: 4rem;
-          height: 6rem;          
+          font-size: 50px;
+          display: table;
+
         }
         .table{
+          height: auto;
+
           tbody{
+            height: auto;
+
             tr{
-              height: 9rem;
+              height: auto;
+
               td{
-                width: 60rem;
+                text-align: left;
+                line-height: auto;
+                padding: 10px;
+                height: auto;
+
                   a{
-                    width: 135%;
                     display: inline-block;
-                    height: 7rem;
                     text-decoration: none;
+                    height: auto;
                   }
               }
               .sender{
                 margin-left: auto;
                 margin-right: auto;
-                font-size: 25px;
-                width: 20rem;
                 text-align: right;
+                width: 25%;
+                font-size: 18px;
               }
               
             }
@@ -171,7 +176,7 @@
             justify-content: center;
             span{
               margin-right: 20px;
-              font-size: 25px;
+              font-size: 18px;
               margin-bottom: 20px;
               a{
                 color: black;
