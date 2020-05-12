@@ -1,0 +1,46 @@
+@charset "UTF-8";
+/* line 1, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.new.scss */
+.main {
+  background-image: url("/images/knives.jpg");
+  background-size: cover;
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+}
+/* line 9, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.new.scss */
+.main .description {
+  text-align: center;
+}
+/* line 12, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.new.scss */
+.main .form {
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
+}
+/* line 16, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.new.scss */
+.main .form input, .main .form textarea {
+  width: 100%;
+  border: none;
+  margin: 10px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 5px;
+  font-size: 18px;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+  opacity: 0.9;
+}
+/* line 28, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.new.scss */
+.main .form input[type=submit], .main .form textarea[type=submit] {
+  background: lightseagreen;
+  color: #fff;
+  width: 100%;
+  cursor: pointer;
+}
+/* line 35, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.new.scss */
+.main .form .content {
+  height: 100px;
+}
+/* line 41, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.new.scss */
+.main * {
+  box-sizing: border-box;
+}

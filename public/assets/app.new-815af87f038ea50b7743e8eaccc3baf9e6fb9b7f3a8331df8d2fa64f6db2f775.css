@@ -1,0 +1,43 @@
+@charset "UTF-8";
+/* line 1, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/app.new.scss */
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  background-image: url("/images/whitebowl.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+/* line 9, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/app.new.scss */
+.wrapper .main {
+  background-size: cover;
+}
+/* line 11, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/app.new.scss */
+.wrapper .main h {
+  margin-left: 30px;
+  color: gray;
+  font-size: 40px;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+}
+/* line 18, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/app.new.scss */
+.wrapper .main ul {
+  margin-left: 50px;
+}
+/* line 20, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/app.new.scss */
+.wrapper .main ul li {
+  font-size: 18px;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+}
+/* line 25, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/app.new.scss */
+.wrapper .main ul a {
+  background-color: lightseagreen;
+  color: white;
+  text-decoration: none;
+  width: 110px;
+  height: 40px;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 40px;
+  display: inline-block;
+  margin-top: 15px;
+}

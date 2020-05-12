@@ -1,0 +1,210 @@
+@charset "UTF-8";
+/* line 1, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.show.scss */
+.wrapper {
+  background-image: url("/images/milk.jpg");
+  background-size: cover;
+  min-height: 200vh;
+  background-attachment: fixed;
+  background-position: center;
+}
+/* line 7, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.show.scss */
+.wrapper .images {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+/* line 12, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.show.scss */
+.wrapper .images .view iframe {
+  border-radius: 5px;
+}
+/* line 18, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.show.scss */
+.wrapper .post__image img {
+  border-radius: 5px;
+}
+/* line 23, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.show.scss */
+.wrapper .chat-area .post-side {
+  width: 70%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  border: solid;
+  margin: top;
+  margin-top: 50px;
+  border-radius: 10px;
+}
+/* line 34, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.show.scss */
+.wrapper .chat-area .post-side__title {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: dotted;
+  font-size: 20px;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+  padding: 12px;
+}
+/* line 44, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.show.scss */
+.wrapper .chat-area .post-side__title .post__likes .button_to {
+  display: inline-block;
+}
+/* line 46, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.show.scss */
+.wrapper .chat-area .post-side__title .post__likes .button_to button {
+  background-color: transparent;
+  border: none;
+}
+/* line 49, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.show.scss */
+.wrapper .chat-area .post-side__title .post__likes .button_to button .like {
+  color: lightseagreen;
+  font-size: 20px;
+}
+/* line 54, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.show.scss */
+.wrapper .chat-area .post-side__title .post__likes .button_to button .dislike {
+  color: black;
+  font-size: 30px;
+}
+/* line 62, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.show.scss */
+.wrapper .chat-area .post-side__content {
+  font-size: 20px;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+  text-align: center;
+  padding: 12px;
+}
+/* line 70, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.show.scss */
+.wrapper .chat-area .post-side__sender {
+  font-size: 18px;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+  text-align: right;
+  padding: 12px;
+}
+/* line 77, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.show.scss */
+.wrapper .chat-area .post-side__edit {
+  font-size: 18px;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+  text-align: right;
+  padding: 13px;
+}
+/* line 83, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.show.scss */
+.wrapper .chat-area .post-side__edit a {
+  text-decoration: underline;
+}
+/* line 87, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.show.scss */
+.wrapper .chat-area .post-side__liked-user {
+  font-size: 18px;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+  text-align: right;
+  padding: 13px;
+}
+/* line 96, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.show.scss */
+.wrapper .chat-area .like-side__create {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 25px;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+  width: 70%;
+  text-align: right;
+}
+/* line 105, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.show.scss */
+.wrapper .chat-area .like-side__user {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 25px;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+  width: 70%;
+  text-align: right;
+}
+/* line 116, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.show.scss */
+.wrapper .chat-area .comment-side__form {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 25px;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+  width: 70%;
+  text-align: center;
+}
+/* line 125, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.show.scss */
+.wrapper .chat-area .comment-side__form .new_comment {
+  margin-top: 20px;
+}
+/* line 127, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.show.scss */
+.wrapper .chat-area .comment-side__form .new_comment .form__message {
+  width: 89%;
+  height: 50px;
+  border-radius: 5px;
+  font-size: 20px;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+}
+/* line 137, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.show.scss */
+.wrapper .chat-area .comment-side__form .new_comment .form__submit {
+  height: 50px;
+  width: 10%;
+  border-radius: 5px;
+  background-color: gray;
+  color: white;
+}
+/* line 146, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.show.scss */
+.wrapper .chat-area .comment-side__index {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20px;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+  width: 55%;
+  height: auto;
+  text-align: center;
+  padding-top: 20px;
+}
+/* line 156, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.show.scss */
+.wrapper .chat-area .comment-side__index .comments {
+  font-size: 50px;
+  display: table;
+}
+/* line 162, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.show.scss */
+.wrapper .chat-area .comment-side__index .table {
+  height: auto;
+}
+/* line 165, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.show.scss */
+.wrapper .chat-area .comment-side__index .table tbody {
+  height: auto;
+}
+/* line 168, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.show.scss */
+.wrapper .chat-area .comment-side__index .table tbody tr {
+  height: auto;
+}
+/* line 171, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.show.scss */
+.wrapper .chat-area .comment-side__index .table tbody tr td {
+  text-align: left;
+  line-height: auto;
+  padding: 10px;
+  height: auto;
+}
+/* line 177, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.show.scss */
+.wrapper .chat-area .comment-side__index .table tbody tr td a {
+  display: inline-block;
+  text-decoration: none;
+  height: auto;
+}
+/* line 183, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.show.scss */
+.wrapper .chat-area .comment-side__index .table tbody tr .sender {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: right;
+  width: 25%;
+  font-size: 18px;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+}
+/* line 199, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.show.scss */
+.wrapper .chat-area .comment-side__index .pages .pagination {
+  justify-content: center;
+}
+/* line 201, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.show.scss */
+.wrapper .chat-area .comment-side__index .pages .pagination span {
+  margin-right: 20px;
+  font-size: 18px;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+  margin-bottom: 20px;
+}
+/* line 207, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.show.scss */
+.wrapper .chat-area .comment-side__index .pages .pagination span a {
+  color: black;
+}
+/* line 216, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.show.scss */
+.wrapper a {
+  color: black;
+}
