@@ -60,7 +60,6 @@ gem 'rmagick'
 gem 'unicorn', '5.4.1'
 gem 'fog-aws'
 gem 'devise'
-gem "jquery-ui-rails"
 gem 'font-awesome-sass', '~> 5.4.1'
 gem 'kaminari'
 
