@@ -18,9 +18,9 @@
         .profile
           .image
             -if @user.image?
-              = image_tag "#{@user.image}", alt: "プロフィール写真", width: "300px"
+              = image_tag "#{@user.image}", alt: "プロフィール写真", width: "100px"
             -else
-              = image_tag "/images/no_image.jpg", alt: "no image", width: "300px"
+              = image_tag "/images/no_image.jpg", alt: "no image", width: "100px"
 
           .datas
             .name
@@ -47,7 +47,10 @@
 
 
       .footer
+        
         .posts-index
+          .desc
+            　投稿一覧
           %table.table.table-hover
             - @posts.each do |post|
               %tr
@@ -55,7 +58,7 @@
                   %i.fas.fa-heart
                   = post.likes.count
                 %td
-                  = link_to "#{post.content}", edit_post_path(post)
+                  = link_to "#{post.shopname}", post_path(post)
                 %td.date
                   = post.created_at.strftime("%Y/%m/%d %H:%M")
         .pages

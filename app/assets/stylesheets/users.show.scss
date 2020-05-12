@@ -11,44 +11,47 @@
     display: flex;
     justify-content: space-around;
     .profile{
-      font-size: 1.7rem;
       display: flex;
-      margin-top: 2rem;
       .image{
         margin-bottom: 20px;
-        margin-left: 9rem;
         img{
           border-radius: 50%;
-          width: 35rem;
-          height: 35rem;
-          margin-left: -18rem;
+          width: 400px;
+          height: 400px;
         }
       }
       .datas{
-        margin-left: 11rem;
-        margin-top: 7rem;
-        width: 26rem;
+        padding-top: 80px;
+        padding-left: 130px;
         .name{
           margin-bottom: 20px;
+          font-size: 18px;
+          a{
+            text-decoration: underline;
+            
+          }
+
         }
         .posts-count{
           margin-bottom: 20px;
+          font-size: 18px;
+
         }
         .likes-count{
           margin-bottom: 20px;
+          font-size: 18px;
+
         }
         .liked-posts{
           margin-bottom: 20px;
+          .accordion{
+            width: 300px;
+
+          }
           .card-body{
-            flex: 1 1 auto;
-            min-height: 1px;
-            padding: 1.25rem;
             display: flex;
             flex-direction: column;
-            align-items: left;
-            align-items: left;
-            align-items: baseline;
-            font-size: 1.3rem;
+            font-size: 18px;
           }
         }
       }
@@ -63,28 +66,37 @@
     flex-direction: column;
     .posts-index{
       margin-top: 100px;
-      width: 80%;
+      width: 70%;
       margin-left: auto;
       margin-right: auto;
       .table{
         width: 100%;
         font-size:25px;
         tbody{
+          font-size: 18px;
+
           tr{
             .like{
-              width: 11%;
+              width: 13%;
+
               .fas{
                 color:red;
               }
             }
             td{
-              width: 74%;
+              padding: 30px;
+
               a{
                 width: 100%;
                 text-decoration: none;
+                display: inline-block;
+
               }
-              .date{
-              }
+              
+            }
+            .date{
+              width: 23%;
+
             }
           }
         }
