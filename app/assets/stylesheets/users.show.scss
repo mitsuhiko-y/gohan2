@@ -5,7 +5,7 @@
   background-attachment: fixed;
   background-position: center;
   a{
-    color: white;
+    color: black;
   }
   .upper{
     display: flex;
@@ -52,6 +52,28 @@
           margin-bottom: 20px;
           .accordion{
             width: 300px;
+            .card{
+              background-color: gray;
+              .card-header{
+                .btn{
+                  color:white;
+                  padding: 0px;
+                  font-size: 16px;
+                }
+
+              
+              }
+              .collapse{
+                .card-body{
+                  a{
+                    color:white;
+                    font-size: 16px;
+                  }
+                }
+              }
+              
+
+            }
 
           }
           .card-body{
@@ -77,6 +99,44 @@
       width: 70%;
       margin-left: auto;
       margin-right: auto;
+      .desc_about_post{
+        font-size: 18px;
+        font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+        text-align: center;
+        color:lightseagreen;
+
+      }
+      .new_post_button{
+        display: block;
+        position: relative;
+        width: 64%;
+        padding: 10px 0;
+        margin: 10px auto;
+        background-color: lightseagreen;
+        box-shadow: 0 5px 0 0 gray;
+        border-radius: 5px;
+        font-size: 18px;
+        font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        overflow: hidden;
+        transition: 0.2s;
+        a{
+          color: white;
+          text-decoration: none;
+          display: inline-block;
+          width: 100%;
+        }
+      }
+      .new_post_button:hover{
+        text-decoration: none;
+        color: #fff;
+        opacity: 0.7;
+        box-shadow: none;
+        -webkit-transform: translateY(3px);
+
+      }
       .table{
         width: 100%;
         font-size:25px;
@@ -92,7 +152,7 @@
               width: 13%;
 
               .fas{
-                color:red;
+                color:lightseagreen;
               }
             }
             td{

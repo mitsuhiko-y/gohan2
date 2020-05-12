@@ -8,6 +8,9 @@
   padding-top:20px;
   .carousel-inner{
     padding: 30px;
+    .carousel-item{
+      padding-top: 20px;
+    }
     .icon_about_slide{
       font-size: 30px;
     }
@@ -31,7 +34,7 @@
       }
     }
     .heart{
-      color:red;
+      color:lightseagreen;
       font-size: 20px;
     }
   }
@@ -70,7 +73,7 @@
         display: inline-block;
       }
       .fas{
-        color:red;
+        color:lightseagreen;
       }
       .sender{
         width: 20%;

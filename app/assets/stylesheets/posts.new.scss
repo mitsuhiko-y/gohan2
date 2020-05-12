@@ -8,7 +8,6 @@
   $green: #84AD47;
   .description{
     text-align: center;
-    
   }
   .form {
     width: 50%;
@@ -24,14 +23,13 @@
       border-radius: 5px;
       font-size: 18px;
       font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
-
       opacity: 0.9;
-
     
       &[type=submit] {
-        background: gray;
+        background: lightseagreen;
         color: #fff;
         width: 100%;
+        cursor: pointer;
       }
     }
     .content{

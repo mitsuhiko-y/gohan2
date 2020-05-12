@@ -1,0 +1,29 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title GoFun
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all'
+    = stylesheet_link_tag    'signup', media: 'all'
+  %body
+    .form
+      = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+        = render "devise/shared/error_messages", resource: resource
+        .field
+          = f.text_field :nickname, autofocus: true,placeholder: 'ニックネーム'
+        .file-field
+          = f.label :image, class: 'form__mask__image' do
+            = icon('fas', 'image', class: 'icon')
+            = f.file_field :image, class: 'hidden'
+
+
+        .field
+          = f.email_field :email, autofocus: true, autocomplete: "email",placeholder: 'メールアドレス'
+        .field
+          = f.password_field :password, autocomplete: "new-password",placeholder: 'パスワード（6文字以上)'
+        .field
+          = f.password_field :password_confirmation, autocomplete: "new-password",placeholder: 'もう一度パスワードを入力してください(確認用)'
+        .actions
+          = f.submit "新規登録"
+    = render "devise/shared/error_messages"
