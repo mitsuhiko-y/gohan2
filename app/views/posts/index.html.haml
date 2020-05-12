@@ -13,65 +13,65 @@
     .main
       .container-fluid
         #carousel-card.carousel.slide{"data-interval" => "6000", "data-ride" => "carousel"}
-          .carousel-inner        
+
+          .carousel-inner      
+            %i.icon_about_slide.fas.fa-caret-square-right
+            %h.desc_about_slide 最新6投稿のスライドです。
+  
             .carousel-item.px-5.mt-5.active
 
               .row
                 .card-wrap.card-pc.col-4
                   -if @posts.count >= 1
                     .index-heart-wrap
-                      %i.fas.fa-heart
+                      %i.heart.fas.fa-heart
                       = "#{@lastpost.likes.count}"
                     .card
                       %a{:href => "/posts/#{@lastpost.id}"}
                         .iframe-card-wrap
-                          %img{:allowfullscreen => "", :frameborder => "0", :height => "500px", :src => "#{@lastpost.image}", :width => "500px"}
-                          .card-overlay
-                            %p
-                              = @lastpost.shopname
-                              %br>/
-                              = "投稿者 : #{@lastpost.user.nickname}"
+                          -if @lastpost.image?
+                            %img{:allowfullscreen => "", :frameborder => "0", :height => "400px", :src => "#{@lastpost.image}", :width => "400px"}
+                          -else 
+                            %img{alt: "写真", height: "400px", src: "/images/no_image.jpg", width: "400px"}
+
                   -else
                     まだ投稿がありません
-                    %img{alt: "写真", height: "500", src: "/images/no_image.jpg", width: "500"}
+                    %img{alt: "写真", height: "400px", src: "/images/no_image.jpg", width: "400px"}
+
 
                 .card-wrap.card-pc.col-4
                   -if @posts.count >= 2
                     .index-heart-wrap
-                      %i.fas.fa-heart
+                      %i.heart.fas.fa-heart
                       = "#{@secondlastpost.likes.count}"
                     .card
                       %a{:href => "/posts/#{@secondlastpost.id}"}
                         .iframe-card-wrap
-                          %img{:allowfullscreen => "", :frameborder => "0", :height => "500", :src => "#{@secondlastpost.image}", :width => "500px"}
-                        .card-overlay
-                          %p
-                            = @secondlastpost.shopname
-                            %br>/
-                            = "投稿者 : #{@secondlastpost.user.nickname}"
+                          -if @secondlastpost.image?
+                            %img{:allowfullscreen => "", :frameborder => "0", :height => "400px", :src => "#{@secondlastpost.image}", :width => "400px"}
+                          -else 
+                            %img{alt: "写真", height: "400px", src: "/images/no_image.jpg", width: "400px"}
+
                   -else
                     まだ投稿がありません
-                    %img{alt: "写真", height: "500", src: "/images/no_image.jpg", width: "500"}
-
-
+                    %img{alt: "写真", height: "400px", src: "/images/no_image.jpg", width: "400px"}
 
                 .card-wrap.card-pc.col-4
                   -if @posts.count >= 3
                     .index-heart-wrap
-                      %i.fas.fa-heart
+                      %i.heart.fas.fa-heart
                       = "#{@thirdlastpost.likes.count}"
                     .card
                       %a{:href => "/posts/#{@thirdlastpost.id}"}
                         .iframe-card-wrap
-                          %img{:allowfullscreen => "", :frameborder => "0", :height => "500", :src => "#{@thirdlastpost.image}", :width => "500px"}
-                        .card-overlay
-                          %p
-                            = @thirdlastpost.shopname
-                            %br>/
-                            = "投稿者 : #{@thirdlastpost.user.nickname}"
+                          -if @thirdlastpost.image?
+                            %img{:allowfullscreen => "", :frameborder => "0", :height => "400px", :src => "#{@thirdlastpost.image}", :width => "400px"}
+                          -else 
+                            %img{alt: "写真", height: "400px", src: "/images/no_image.jpg", width: "400px"}
+ 
                   -else
                     まだ投稿がありません
-                    %img{alt: "写真", height: "500", src: "/images/no_image.jpg", width: "500"}
+                    %img{alt: "写真", height: "400px", src: "/images/no_image.jpg", width: "400px"}
               
             .carousel-item.px-5.mt-5
 
@@ -79,60 +79,55 @@
                 .card-wrap.card-pc.col-4
                   -if @posts.count >= 4
                     .index-heart-wrap
-                      %i.fas.fa-heart
+                      %i.heart.fas.fa-heart
                       = "#{@fourthlastpost.likes.count}"
                     .card
                       %a{:href => "/posts/#{@fourthlastpost.id}"}
                         .iframe-card-wrap
-                          %img{:allowfullscreen => "", :frameborder => "0", :height => "500", :src => "#{@fourthlastpost.image}", :width => "500px"}
-                        .card-overlay
-                          %p
-                            = @fourthlastpost.shopname
-                            %br>/
-                            = "投稿者 : #{@fourthlastpost.user.nickname}"
+                          -if @fourthlastpost.image?
+                            %img{:allowfullscreen => "", :frameborder => "0", :height => "400px", :src => "#{@fourthlastpost.image}", :width => "400px"}
+                          -else 
+                            %img{alt: "写真", height: "400px", src: "/images/no_image.jpg", width: "400px"}
+
                   -else
                     まだ投稿がありません
-                    %img{alt: "写真", height: "500", src: "/images/no_image.jpg", width: "500"}
+                    %img{alt: "写真", height: "400px", src: "/images/no_image.jpg", width: "400px"}
 
                 .card-wrap.card-pc.col-4
                   -if @posts.count >= 5
 
                     .index-heart-wrap
-                      %i.fas.fa-heart
+                      %i.heart.fas.fa-heart
                       = "#{@fifthlastpost.likes.count}"
                     .card
                       %a{:href => "/posts/#{@fifthlastpost.id}"}
                         .iframe-card-wrap
-                          %img{:allowfullscreen => "", :frameborder => "0", :height => "500", :src => "#{@fifthlastpost.image}", :width => "500px"}
-                        .card-overlay
-                          %p
-                            = @fifthlastpost.shopname
-                            %br>/
-                            = "投稿者 : #{@fifthlastpost.user.nickname}"
+                          -if @fifthlastpost.image?
+                            %img{:allowfullscreen => "", :frameborder => "0", :height => "400px", :src => "#{@fifthlastpost.image}", :width => "400px"}
+                          -else 
+                            %img{alt: "写真", height: "400px", src: "/images/no_image.jpg", width: "400px"}
+
                   -else
                     まだ投稿がありません
-                    %img{alt: "写真", height: "500", src: "/images/no_image.jpg", width: "500"}
-
+                    %img{alt: "写真", height: "400px", src: "/images/no_image.jpg", width: "400px"}
 
                 .card-wrap.card-pc.col-4
                   -if @posts.count >= 6
 
                     .index-heart-wrap
-                      %i.fas.fa-heart
+                      %i.heart.fas.fa-heart
                       = "#{@sixthlastpost.likes.count}"
                     .card
                       %a{:href => "/posts/#{@sixthlastpost.id}"}
                         .iframe-card-wrap
-                          %img{:allowfullscreen => "", :frameborder => "0", :height => "500", :src => "#{@sixthlastpost.image}", :width => "500px"}
-                        .card-overlay
-                          %p
-                            = @sixthlastpost.shopname
-                            %br>/
-                            = "投稿者 : #{@sixthlastpost.user.nickname}"
+                          -if @sixthlastpost.image?
+                            %img{:allowfullscreen => "", :frameborder => "0", :height => "400px", :src => "#{@sixthlastpost.image}", :width => "400px"}
+                          -else 
+                            %img{alt: "写真", height: "400px", src: "/images/no_image.jpg", width: "400px"}
+
                   -else
                     まだ投稿がありません
-                    %img{alt: "写真", height: "500", src: "/images/no_image.jpg", width: "500"}
-
+                    %img{alt: "写真", height: "400px", src: "/images/no_image.jpg", width: "400px"}
 
           %a.carousel-control-prev{"data-slide" => "prev", :href => "#carouselExampleFade", :role => "button"}
             %span.carousel-control-prev-icon{"aria-hidden" => "true"}
@@ -142,7 +137,9 @@
             %span.sr-only Next
 
         .posts-index
-          
+          %i.icon_about_index.far.fa-comment-dots
+          %h.desc_about_index 投稿一覧
+
           %table.table.table-hover
             - @posts.each do |post|
 
@@ -159,8 +156,6 @@
 
         .pages
           = paginate(@posts)
-
-
             
       %script{:type => "module", :crossorigin => "anonymous", :integrity => "sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n", :src => "https://code.jquery.com/jquery-3.4.1.slim.min.js"}
       %script{:type => "module", :crossorigin => "anonymous", :integrity => "sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo", :src => "https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"}

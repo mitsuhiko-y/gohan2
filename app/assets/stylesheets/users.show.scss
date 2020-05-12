@@ -5,7 +5,7 @@
   background-attachment: fixed;
   background-position: center;
   a{
-    color: black;
+    color: white;
   }
   .upper{
     display: flex;
@@ -26,6 +26,8 @@
         .name{
           margin-bottom: 20px;
           font-size: 18px;
+          font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+
           a{
             text-decoration: underline;
             
@@ -35,11 +37,15 @@
         .posts-count{
           margin-bottom: 20px;
           font-size: 18px;
+          font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+
 
         }
         .likes-count{
           margin-bottom: 20px;
           font-size: 18px;
+          font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+
 
         }
         .liked-posts{
@@ -52,6 +58,8 @@
             display: flex;
             flex-direction: column;
             font-size: 18px;
+            font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+
           }
         }
       }
@@ -72,8 +80,12 @@
       .table{
         width: 100%;
         font-size:25px;
+        font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+
         tbody{
           font-size: 18px;
+          font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+
 
           tr{
             .like{
@@ -108,6 +120,8 @@
         span{
           margin-right: 20px;
           font-size: 25px;
+          font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+
           margin-bottom: 20px;
           a{
             color: black;
