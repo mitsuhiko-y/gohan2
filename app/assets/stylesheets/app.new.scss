@@ -5,34 +5,33 @@
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
-
   .main{
     background-size:cover;
+    padding-top: 67px;
     h{
       margin-left:30px;
       color:gray;
       font-size: 40px;
       font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
-
     }
     ul{
       margin-left: 50px;
       li{
         font-size: 18px;
         font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
-
       }
       a{
         background-color: lightseagreen;
         color: white;
         text-decoration: none;
-        width: 110px;
+        width: 130px;
         height: 40px;
         border-radius: 5px;
         text-align: center;
         line-height: 40px;
         display: inline-block;
         margin-top: 15px;
+        font-size: 18px;
       }
     }
   }
