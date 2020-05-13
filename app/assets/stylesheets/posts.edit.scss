@@ -34,10 +34,7 @@
         border-radius: 5px;
         font-size: 18px;
         font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
-        opacity: 0.9;
-        white-space: pre-wrap;
-        overflow-wrap: break-word;
-    
+        opacity: 0.9;    
         &[type=submit] {
           background: lightseagreen;
           color: #fff;
