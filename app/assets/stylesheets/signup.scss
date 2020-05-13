@@ -33,6 +33,7 @@
           opacity: 0.9;    
           padding: 10px 0px 10px 0px;
           border-radius: 5px;
+          border: none;
         }
       }
       .file-field{
@@ -47,6 +48,7 @@
         opacity: 0.9;    
         input, textarea {
           font-size: 18px;
+          border: none;
         }
         #user_image{
           display: none;
