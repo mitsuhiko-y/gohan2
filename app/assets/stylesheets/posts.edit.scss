@@ -1,0 +1,90 @@
+.main{
+  height: 100%;
+  background-image: url("/images/knives.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  $green: #84AD47;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .description{
+    text-align: center;
+  }
+  .edit_area{
+    width: 50%;
+    margin: auto;
+    .about_page{
+      margin: auto;
+      font-size: 18px;
+      font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+      .edit_icon{
+        font-size: 30px;
+      }
+    }
+    .edit-form {
+      margin-right: auto;
+      margin-left: auto;
+      input, textarea {
+        width: 100%;
+        border: none;
+        margin: 10px 0px 10px 0px;
+        padding: 10px 0px 10px 10px;
+        background-color: white;
+        border-radius: 5px;
+        font-size: 18px;
+        font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+        opacity: 0.9;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+    
+        &[type=submit] {
+          background: lightseagreen;
+          color: #fff;
+          width: 100%;
+          cursor: pointer;
+        }
+      }
+      .edit_post{
+        .file-field{
+          width: 100%;
+          border: none;
+          margin: 10px 0px 10px 0px;
+          padding: 10px 0px 10px 10px;
+          background-color: white;
+          border-radius: 5px;
+          font-size: 18px;
+          font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+          opacity: 0.9;
+          .form__mask__image{
+            input, textarea {
+            }
+            #post_image{
+              display: none;
+            }
+          }
+        }
+      }
+      .content{
+        height: 100px;
+      }
+    }
+    .destroy{
+      margin-left: auto;
+      margin-right: auto;
+      text-align: right;
+      .btn{
+        font-size: 30px;
+        color: red;
+        text-decoration: none;
+        .about_delete_button{
+          font-size: 18px;
+          font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+        }
+      }
+    }
+  }
+  * {
+    box-sizing: border-box;
+  }
+}

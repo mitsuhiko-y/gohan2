@@ -7,20 +7,27 @@
     = stylesheet_link_tag    'application', media: 'all'
     = stylesheet_link_tag    'posts.edit', media: 'all'
 
-投稿編集ページです。
+.edit_area
+  .about_page
+    %i.edit_icon.far.fa-edit
+    %h.about_delete_button 投稿編集ページです。
 
-.edit-form
-  = form_for [@post] do |f|
-    = f.text_field :shopname, class: 'shopname', placeholder: 'お店の名前'
-    = f.text_field :view, class: 'view', placeholder: 'ストリートビュー'
+  .edit-form
+    = form_for [@post] do |f|
+      .field
+        = f.text_field :shopname, class: 'shopname', placeholder: 'お店の名前'
+      .field
+        = f.text_field :view, class: 'view', placeholder: 'ストリートビュー'
+      .file-field
+        = f.label :image, class: 'form__mask__image' do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: 'hidden'
+      .field
+        = f.text_area :content, class: 'content', placeholder: 'お店に行った感想など自由に書いてください', rows: "10"
+      .field
+        = f.submit '上書きする', class: 'form__submit'
 
-    = f.file_field :image, class: 'image', placeholder: '画像'
-    -# = f.label :image, class: 'image' do
-    -#   = icon('fas', 'image', class: 'icon')
-    -#   = f.file_field :image, class: 'hidden'
-
-    = f.text_field :content, class: 'content', placeholder: 'お店に行った感想など自由に書いてください', rows: "10"
-    = f.submit 'Send', class: 'form__submit'
-
-.destroy
-  = link_to "投稿を削除する", post_path(@post), method: :delete, data: { confirm: "投稿を削除してもよろしいですか？\n（一度削除すると復元できません）" }
+  .destroy
+    %a.btn.btn-danger{"aria-label" => "Delete", :href => "/posts/#{@post.id}", "data-method" => "delete", "data-confirm" => "この投稿を削除してよろしいですか?"}
+      %i.far.fa-trash-alt{"aria-hidden" => "true", :title => "この投稿を削除しますか？"}
+      %h.about_delete_button 削除する
