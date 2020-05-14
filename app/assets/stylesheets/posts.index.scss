@@ -6,9 +6,15 @@
   background-position: center;
   padding-top: 50px;
   .carousel-inner{
-    padding: 0px 30px 30px 30px;
+    padding: 5px 37px 30px 37px;
     .carousel-item{
       padding-top: 20px;
+      p{
+        text-align: center;
+        padding-bottom: 7px;
+        font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+        font-size: 18px;
+      }
     }
     .icon_about_slide{
       font-size: 30px;
@@ -33,6 +39,16 @@
     .heart{
       color:lightseagreen;
       font-size: 20px;
+    }
+  }
+  .carousel-control-prev{
+    .carousel-control-prev-icon{
+      display: none;
+    }
+  }
+  .carousel-control-next{
+    .carousel-control-next-icon{
+      display: none;
     }
   }
   .posts-index{

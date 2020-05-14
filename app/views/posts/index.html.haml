@@ -12,14 +12,12 @@
   %body
     .main
       .container-fluid
-        #carousel-card.carousel.slide{"data-interval" => "6000", "data-ride" => "carousel"}
+        #carousel-card.carousel.slide{"data-interval" => "3000", "data-ride" => "carousel"}
 
           .carousel-inner      
             %i.icon_about_slide.fas.fa-sync.fa-spin
             %h.desc_about_slide 最新6投稿のスライドです。
-  
             .carousel-item.px-5.mt-5.active
-
               .row
                 .card-wrap.card-pc.col-4
                   -if @posts.count >= 1
@@ -33,11 +31,9 @@
                             %img{:allowfullscreen => "", :frameborder => "0", :height => "400px", :src => "#{@lastpost.image}", :width => "400px"}
                           -else 
                             %img{alt: "写真", height: "400px", src: "/images/no_image.jpg", width: "400px"}
-
                   -else
-                    まだ投稿がありません
+                    %p まだ投稿がありません
                     %img{alt: "写真", height: "400px", src: "/images/no_image.jpg", width: "400px"}
-
 
                 .card-wrap.card-pc.col-4
                   -if @posts.count >= 2
@@ -51,9 +47,8 @@
                             %img{:allowfullscreen => "", :frameborder => "0", :height => "400px", :src => "#{@secondlastpost.image}", :width => "400px"}
                           -else 
                             %img{alt: "写真", height: "400px", src: "/images/no_image.jpg", width: "400px"}
-
                   -else
-                    まだ投稿がありません
+                    %p まだ投稿がありません
                     %img{alt: "写真", height: "400px", src: "/images/no_image.jpg", width: "400px"}
 
                 .card-wrap.card-pc.col-4
@@ -68,13 +63,11 @@
                             %img{:allowfullscreen => "", :frameborder => "0", :height => "400px", :src => "#{@thirdlastpost.image}", :width => "400px"}
                           -else 
                             %img{alt: "写真", height: "400px", src: "/images/no_image.jpg", width: "400px"}
- 
                   -else
-                    まだ投稿がありません
+                    %p まだ投稿がありません
                     %img{alt: "写真", height: "400px", src: "/images/no_image.jpg", width: "400px"}
               
             .carousel-item.px-5.mt-5
-
               .row
                 .card-wrap.card-pc.col-4
                   -if @posts.count >= 4
@@ -88,14 +81,12 @@
                             %img{:allowfullscreen => "", :frameborder => "0", :height => "400px", :src => "#{@fourthlastpost.image}", :width => "400px"}
                           -else 
                             %img{alt: "写真", height: "400px", src: "/images/no_image.jpg", width: "400px"}
-
                   -else
-                    まだ投稿がありません
+                    %p まだ投稿がありません
                     %img{alt: "写真", height: "400px", src: "/images/no_image.jpg", width: "400px"}
 
                 .card-wrap.card-pc.col-4
                   -if @posts.count >= 5
-
                     .index-heart-wrap
                       %i.heart.fas.fa-heart
                       = "#{@fifthlastpost.likes.count}"
@@ -106,14 +97,12 @@
                             %img{:allowfullscreen => "", :frameborder => "0", :height => "400px", :src => "#{@fifthlastpost.image}", :width => "400px"}
                           -else 
                             %img{alt: "写真", height: "400px", src: "/images/no_image.jpg", width: "400px"}
-
                   -else
-                    まだ投稿がありません
+                    %p まだ投稿がありません
                     %img{alt: "写真", height: "400px", src: "/images/no_image.jpg", width: "400px"}
 
                 .card-wrap.card-pc.col-4
                   -if @posts.count >= 6
-
                     .index-heart-wrap
                       %i.heart.fas.fa-heart
                       = "#{@sixthlastpost.likes.count}"
@@ -124,9 +113,8 @@
                             %img{:allowfullscreen => "", :frameborder => "0", :height => "400px", :src => "#{@sixthlastpost.image}", :width => "400px"}
                           -else 
                             %img{alt: "写真", height: "400px", src: "/images/no_image.jpg", width: "400px"}
-
                   -else
-                    まだ投稿がありません
+                    %p まだ投稿がありません
                     %img{alt: "写真", height: "400px", src: "/images/no_image.jpg", width: "400px"}
 
           %a.carousel-control-prev{"data-slide" => "prev", :href => "#carouselExampleFade", :role => "button"}
@@ -139,10 +127,8 @@
         .posts-index
           %i.icon_about_index.far.fa-comment-dots
           %h.desc_about_index 投稿一覧
-
           %table.table.table-hover
             - @posts.each do |post|
-
               %tr{:style=>"height: 80px;"}
                 %td.like
                   %i.fas.fa-heart
