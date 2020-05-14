@@ -7,21 +7,20 @@
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
     
-    
   %body
     .wrapper
       .header
         = link_to "ロゴ", root_path
         .header_set
           - if user_signed_in?
-            = link_to current_user.nickname, user_path(current_user.id)
-            = link_to "投稿一覧", posts_path
-            = link_to "投稿する", new_post_path
-            = link_to "ログアウトする", destroy_user_session_path, method: :delete, data: { confirm: "ログアウトしてよろしいですか？" }
+            = link_to "マイページ", user_path(current_user.id)
+            = link_to "タイムライン", posts_path
+            = link_to "新規投稿", new_post_path
+            = link_to "ログアウト", destroy_user_session_path, method: :delete, data: { confirm: "ログアウトしてよろしいですか？" }
           - else
-            = link_to "about", new_app_path
+            = link_to "GoFunとは", new_app_path
             = link_to "新規登録", new_user_registration_path
-            = link_to "ログインする", new_user_session_path
+            = link_to "ログイン", new_user_session_path
       .main
         = render 'layouts/notifications'
         = yield
