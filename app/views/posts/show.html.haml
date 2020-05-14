@@ -47,7 +47,7 @@
 
     .comment-side
       .comment-side__form
-        = form_for [@post, @comment], remote: true do |f|
+        = form_for [@post, @comment] do |f|
           = f.text_area :content, class: 'form__message', placeholder: 'コメントを送ってみましょう'
           = f.submit 'Send', class: 'form__submit'
 

@@ -2,32 +2,10 @@ class CommentsController < ApplicationController
   def create
     @comment = Comment.create(comment_params)
     if @comment.save
-      respond_to do |format|
-        format.json
-      end
+      redirect_to post_path(@comment.post.id), notice: "コメントできました"
     else
       flash.now[:alert] = 'コメントを入力してください。'
       render post_path(@comment.post)
-    end
-  end
-
-  def show
-    @comment = Comment.find(params[:id])
-  end
-
-  def edit
-    @comment = Comment.find(params[:id])
-    @post = @comment.post
-  end
-
-  def update
-    @comment = Comment.find(params[:id])
-    @comment.update(comment_params)
-    if @comment.save
-      redirect_to post_path(@comment.post.id), notice: "コメント更新できました"
-    else
-      flash.now[:alert] = '空欄では更新出来ません'
-      render action: :edit
     end
   end
 
