@@ -10,16 +10,15 @@
   %body
     .wrapper
       .header
-        = link_to image_tag("/images/GoFunロゴ.png", alt: "ロゴ", width: "125px"), root_path
         .header_set
           - if user_signed_in?
+            = link_to image_tag("/images/GoFun_icon.png", alt: "ロゴ", width: "40px"), user_path(current_user.id)
             = link_to "マイページ", user_path(current_user.id)
             = link_to "タイムライン", posts_path
             = link_to "新規投稿", new_post_path
             = link_to "ログアウト", destroy_user_session_path, method: :delete, data: { confirm: "ログアウトしてよろしいですか？" }
           - else
-            = link_to "GoFunとは", new_app_path
-            = link_to "新規登録", new_user_registration_path
+            = link_to image_tag("/images/GoFun_icon.png", alt: "ロゴ", width: "40px"), new_app_path
             = link_to "ログイン", new_user_session_path
       .main
         = render 'layouts/notifications'

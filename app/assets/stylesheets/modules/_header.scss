@@ -9,6 +9,10 @@
   z-index: 1;
   font-size: 18px;
   font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+  .header_set{
+    display: flex;
+    align-items: center;
+  }
 
   a{
     margin-left:10px;

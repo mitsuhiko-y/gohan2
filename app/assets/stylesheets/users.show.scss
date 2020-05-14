@@ -4,9 +4,6 @@
   min-height: 165vh;
   background-attachment: fixed;
   background-position: center;
-  a{
-    color: black;
-  }
   .main{
     padding-top: 50px;
   }
@@ -32,6 +29,7 @@
           font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
           a{
             text-decoration: underline;
+            color:black;
           }
         }
         .posts-count{
