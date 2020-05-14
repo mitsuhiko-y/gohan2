@@ -10,7 +10,7 @@
   %body
     .wrapper
       .header
-        = link_to "ロゴ", root_path
+        = link_to image_tag("/images/GoFunロゴ.png", alt: "ロゴ", width: "125px"), root_path
         .header_set
           - if user_signed_in?
             = link_to "マイページ", user_path(current_user.id)
