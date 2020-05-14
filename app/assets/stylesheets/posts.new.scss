@@ -24,25 +24,27 @@
         font-size: 36px;
       }
     }
-    input, textarea {
-      width: 100%;
-      border: none;
-      margin: 10px;
-      padding: 10px;
-      background-color: white;
-      border-radius: 5px;
-      font-size: 18px;
-      font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
-      opacity: 0.9;
-      &[type=submit] {
-        background: lightseagreen;
-        color: #fff;
+    .new_post{
+      input, textarea {
         width: 100%;
-        cursor: pointer;
+        border: none;
+        margin: 10px;
+        padding: 10px;
+        background-color: white;
+        border-radius: 5px;
+        font-size: 18px;
+        font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+        opacity: 0.9;
+        &[type=submit] {
+          background: lightseagreen;
+          color: #fff;
+          width: 100%;
+          cursor: pointer;
+        }
       }
-    }
-    .content{
-      height: 100px;
+      .content{
+        height: 128px;
+      }
     }
   }
   * {

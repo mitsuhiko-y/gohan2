@@ -19,5 +19,5 @@
       = f.text_field :view, class: 'view', placeholder: 'ストリートビュー'
       = f.file_field :image, class: 'image', placeholder: '画像'
       = f.hidden_field :image_cache
-      = f.text_field :content, class: 'content', placeholder: 'お店に行った感想など', rows: "3"
+      = f.text_area :content, class: 'content', placeholder: 'お店に行った感想など', rows: "3"
       = f.submit '投稿する', class: 'form__submit'
