@@ -49,7 +49,7 @@
       .comment-side__form
         = form_for [@post, @comment] do |f|
           = f.text_area :content, class: 'form__message', placeholder: 'コメントを送ってみましょう'
-          = f.submit 'Send', class: 'form__submit'
+          = f.submit 'コメントする', class: 'form__submit'
 
       .comment-side__index  
         %i.comments.far.fa-comments

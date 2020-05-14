@@ -133,7 +133,7 @@
             border: none;
           }
           .form__message{
-            width: 89%;
+            width: 85%;
             border-radius: 5px;
             font-size: 20px;
             font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
@@ -144,10 +144,11 @@
           }
           .form__submit{
             height: 50px;
-            width: 10%;
+            width: 13%;
             border-radius: 5px;
             background-color: lightseagreen;
             color: white;
+            font-size: 18px;
           }
         }
       }
