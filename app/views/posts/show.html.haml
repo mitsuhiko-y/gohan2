@@ -1,4 +1,3 @@
-
 !!!
 %html
   %head
@@ -25,12 +24,11 @@
           -if current_user.already_liked?(@post)
             = button_to post_like_path(@post), method: :delete, remote: true do
               %i.like.fas.fa-heart
-              = "#{@post.likes.count}　　　#{@post.shopname}"
+              = "#{@post.likes.count}　　#{@post.shopname}"
           -else
             = button_to post_likes_path(@post), remote: true do
               %i.dislike.far.fa-heart
-              = @post.likes.count
-            = @post.shopname
+              = "#{@post.likes.count}　　#{@post.shopname}"
    
       .post-side__content
         = @post.content
@@ -40,7 +38,10 @@
           = @post.created_at.strftime("%Y/%m/%d %H:%M")
       .post-side__edit
         - if current_user.id == @post.user.id
-          = link_to "投稿を編集する", edit_post_path(@post)
+          %a.btn{"aria-label" => "Edit", :href => "/posts/#{@post.id}/edit"}
+            %i.far.fa-edit{"aria-hidden" => "true", :title => "この投稿を編集しますか？"}
+            %h.about_delete_button 投稿編集
+
       .post-side__liked-user
         いいねしたユーザー▶︎
         - @post.liked_users.each do |user|
@@ -60,7 +61,7 @@
         %table.table.table-hover
           - @comments.each do |comment|
 
-            %tr{:style=>"height: 80px;"}
+            %tr
               %td
                 = link_to "#{comment.content}", edit_post_comment_path(comment.post.id, comment.id)
               %td.sender
@@ -74,5 +75,3 @@
       %script{:type => "module", :crossorigin => "anonymous", :integrity => "sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n", :src => "https://code.jquery.com/jquery-3.4.1.slim.min.js"}
       %script{:type => "module", :crossorigin => "anonymous", :integrity => "sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo", :src => "https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"}
       %script{:type => "module", :crossorigin => "anonymous", :integrity => "sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6", :src => "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"}
-
-

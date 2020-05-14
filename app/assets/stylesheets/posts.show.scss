@@ -1,9 +1,12 @@
 .wrapper{
   background-image: url("/images/milk.jpg");
   background-size: cover;
-  min-height: 200vh;
+  min-height: 233vh;
   background-attachment: fixed;
   background-position: center;
+  .main{
+    padding-top: 50px;
+  }
   .images{
     display: flex;
     justify-content: space-between;
@@ -29,17 +32,13 @@
       margin: top;
       margin-top: 50px;
       border-radius: 10px;
-      
-
       &__title{
         display: flex;
         justify-content: space-around;   
         border-bottom: dotted;
         font-size: 20px;
         font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
-
         padding: 12px;
-
         .post__likes{
           .button_to{
             display: inline-block;
@@ -49,37 +48,44 @@
               .like{
                 color: lightseagreen;
                 font-size: 20px;
-                
               }
               .dislike{
                 color:black;
-                font-size: 30px;
+                font-size: 20px;
               }
             }
           }
         }
       }
       &__content{
-
         font-size: 20px;
         font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
-
         text-align: center;
         padding: 12px;
+        width: 100%;
+        height: 107px;
+        overflow: scroll;
+        word-wrap: break-word;
       }
       &__sender{
         font-size: 18px;
         font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
-
         text-align: right;
         padding: 12px;
       }
       &__edit{
         font-size: 18px;
         font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
-
         text-align: right;
         padding: 13px;
+        .btn{
+          font-size: 18px;
+          text-decoration: underline;      
+          .about_delete_button{
+            font-size: 18px;
+            font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+          }
+        }
         a{
           text-decoration: underline;
         }
@@ -87,9 +93,10 @@
       &__liked-user{
         font-size: 18px;
         font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
-
         text-align: right;
         padding: 13px;
+        overflow: scroll;
+        height: 85px;
       }
     }
     .like-side{
@@ -98,7 +105,6 @@
         margin-right: auto;
         font-size: 25px;
         font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
-
         width: 70%;
         text-align: right;
       }
@@ -107,7 +113,6 @@
         margin-right: auto;
         font-size: 25px;
         font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
-
         width: 70%;
         text-align: right;
       }
@@ -118,27 +123,30 @@
         margin-right: auto;
         font-size: 25px;
         font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
-
         width: 70%;
         text-align: center;
-        
         .new_comment{
           margin-top: 20px;
+          display: flex;
+          justify-content: space-between;
+          input{
+            border: none;
+          }
           .form__message{
             width: 89%;
-            height: 50px;
             border-radius: 5px;
             font-size: 20px;
             font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
-
-
-
+            overflow: scroll;
+            height: 90px;
+            line-height: 30px;
+            padding-left: 5px;
           }
           .form__submit{
             height: 50px;
             width: 10%;
             border-radius: 5px;
-            background-color: gray;
+            background-color: lightseagreen;
             color: white;
           }
         }
@@ -148,36 +156,36 @@
         margin-right: auto;
         font-size: 20px;
         font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
-
         width: 55%;
         height: auto;
         text-align: center;
         padding-top: 20px;
         .comments{
           font-size: 50px;
-
           display: table;
-
         }
         .table{
           height: auto;
-
+          table-layout: fixed; 
           tbody{
             height: auto;
-
             tr{
               height: auto;
-
               td{
                 text-align: left;
                 line-height: auto;
                 padding: 10px;
-                height: auto;
-
+                height: 86px;
+                font-size: 20px;
+                font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+                width: 77%;
+                word-wrap: break-word;
                   a{
+                    width: 100%;
                     display: inline-block;
                     text-decoration: none;
-                    height: auto;
+                    height: 86px;
+                    overflow: scroll;
                   }
               }
               .sender{
@@ -187,14 +195,10 @@
                 width: 25%;
                 font-size: 18px;
                 font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
-
               }
-              
             }
-
           }
         }
-        
         .pages{
           .pagination{
             justify-content: center;
@@ -202,7 +206,6 @@
               margin-right: 20px;
               font-size: 18px;
               font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
-
               margin-bottom: 20px;
               a{
                 color: black;
