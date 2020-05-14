@@ -3,9 +3,7 @@ class LikesController < ApplicationController
   def index
     @like = Like.find(params[:id])  
     @user = @like.user
-
     @user = User.find(params[:id])  
-
   end
 
   def create

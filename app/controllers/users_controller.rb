@@ -4,12 +4,6 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
-    # return nil if params[:keyword] == ""
-    # @users = User.where(['name LIKE ?', "%#{params[:keyword]}%"] ).where.not(id: current_user.id).limit(10)
-    # respond_to do |format|
-    #   format.html
-    #   format.json
-    # end
   end
 
   def new
@@ -17,7 +11,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @posts = @user.posts.order("created_at DESC").page(params[:page]).per(10)
+    @posts = @user.posts.order("created_at DESC").page(params[:page]).per(5)
   end
 
   def edit
@@ -25,7 +19,7 @@ class UsersController < ApplicationController
 
   def update
     if current_user.update(user_params)
-      redirect_to root_path
+      redirect_to user_path(current_user)
     else
       render :edit
     end

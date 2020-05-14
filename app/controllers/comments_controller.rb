@@ -11,20 +11,6 @@ class CommentsController < ApplicationController
     end
   end
 
-  # def create
-  #   @message = @group.messages.new(message_params)
-  #   if @message.save
-  #     respond_to do |format|
-  #       format.html { redirect_to group_messages_path, notice: "メッセージを送信しました" }
-  #       format.json
-  #     end
-  #   else
-  #     @messages = @group.messages.includes(:user)
-  #     flash.now[:alert] = 'メッセージを入力してください。'
-  #     render :index
-  #   end
-  # end
-
   def show
     @comment = Comment.find(params[:id])
   end
@@ -39,12 +25,7 @@ class CommentsController < ApplicationController
     @comment.update(comment_params)
     if @comment.save
       redirect_to post_path(@comment.post.id), notice: "コメント更新できました"
-      # respond_to do |format|
-      #   format.html { redirect_to posts_path, notice: "投稿できました" }
-      #   format.json
-      # end
     else
-      # @posts = @user.posts.includes(:user)
       flash.now[:alert] = '空欄では更新出来ません'
       render action: :edit
     end
@@ -55,7 +36,6 @@ class CommentsController < ApplicationController
     comment.destroy
     redirect_to post_path(comment.post.id), notice: "コメントを削除しました"
   end
-
 
   private
   def comment_params

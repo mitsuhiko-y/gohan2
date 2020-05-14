@@ -1,13 +1,12 @@
 .main{
   background-image: url("/images/white_wall.jpeg");
-  min-height: 200vh;
+  min-height: 170vh;
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
-
-  padding-top:20px;
+  padding-top: 50px;
   .carousel-inner{
-    padding: 30px;
+    padding: 0px 30px 30px 30px;
     .carousel-item{
       padding-top: 20px;
     }
@@ -17,9 +16,7 @@
     .desc_about_slide{
       font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
       font-size: 20px;
-
     }
-
     .card{
       width: 400px;
       height: 400px;
@@ -40,7 +37,7 @@
   }
   .posts-index{
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 50px;
     width: 70%;
     margin-right: auto;
     margin-left: auto;
@@ -51,15 +48,12 @@
       font-size: 20px;
       font-weight: bold;
     }
-
-
-    
     .table{
       font-size: 20px;
       font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
       margin-left: auto;
       margin-right: auto;
-
+      margin-top: 20px;
       .like{
         width: 10%;
       }
@@ -79,18 +73,17 @@
         width: 20%;
         font-size: 18px;
         font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
-
       }
     }
   }
   .pages{
+    margin-top: 50px;
     .pagination{
       justify-content: center;
       span{
         margin-right: 20px;
-        font-size: 25px;
+        font-size: 18px;
         font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
-
         margin-bottom: 20px;
         a{
           color: black;

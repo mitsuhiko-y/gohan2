@@ -1,7 +1,7 @@
 .wrapper{
   background-image: url("/images/cup.jpg");
   background-size: cover;
-  min-height: 200vh;
+  min-height: 165vh;
   background-attachment: fixed;
   background-position: center;
   a{
@@ -155,11 +155,12 @@
       }  
     }
     .pages{
+      margin-top: 50px;
       .pagination{
         justify-content: center;
         span{
           margin-right: 20px;
-          font-size: 25px;
+          font-size: 18px;
           font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
           margin-bottom: 20px;
           a{

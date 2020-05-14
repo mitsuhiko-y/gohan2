@@ -13,7 +13,6 @@
   .images
     .view
       %iframe{:height => "100%", :width => "300%", :src => "#{@post.view.gsub(/<iframe src="/,'').gsub(/" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">/,'').gsub(/<iframe src="/,'')}"}     
-    
     .post__image
       %img{:allowfullscreen => "", :frameborder => "0", :height => "500px", :src => "#{@post.image}", :width => "500px"}
 
@@ -41,7 +40,6 @@
           %a.btn{"aria-label" => "Edit", :href => "/posts/#{@post.id}/edit"}
             %i.far.fa-edit{"aria-hidden" => "true", :title => "この投稿を編集しますか？"}
             %h.about_delete_button 投稿編集
-
       .post-side__liked-user
         いいねしたユーザー▶︎
         - @post.liked_users.each do |user|
@@ -54,12 +52,9 @@
           = f.submit 'Send', class: 'form__submit'
 
       .comment-side__index  
-
         %i.comments.far.fa-comments
-          
         %table.table.table-hover
           - @comments.each do |comment|
-
             %tr
               %td
                 %p 
@@ -68,12 +63,10 @@
                 = "by▶︎#{comment.user.nickname}"
                 %br
                   = comment.created_at.strftime("%Y/%m/%d %H:%M")
-
                   - if current_user.id == comment.user.id
                     %br
                       %a.btn{"aria-label" => "Delete", :href => "/posts/#{comment.post.id}/comments/#{comment.id}", "data-method" => "delete", "data-confirm" => "このコメントを削除してよろしいですか?"}
                         %i.far.fa-trash-alt{"aria-hidden" => "true", :title => "このコメントを削除しますか？"}
-
 
         .pages
           = paginate(@comments)

@@ -2,15 +2,8 @@ class PostsController < ApplicationController
   before_action :set_group
   before_action :move_to_index, except: [:index, :show, :search]
 
-  # def initialize(shopname, view, image, content)
-  #   @shopname = shopname
-  #   @view = view
-  #   @image = image
-  #   @content = content
-  # end
-
   def index
-    @posts = Post.all.order("created_at DESC").page(params[:page]).per(10)
+    @posts = Post.all.order("created_at DESC").page(params[:page]).per(5)
     @lastpost = Post.last
     @secondlastpost = Post.last(2)[0]
     @thirdlastpost = Post.last(3)[0]
@@ -27,12 +20,7 @@ class PostsController < ApplicationController
     @post = @user.posts.new(post_params)
     if @post.save
       redirect_to posts_path, notice: "投稿できました" 
-      # respond_to do |format|
-      #   format.html { redirect_to posts_path, notice: "投稿できました" }
-      #   format.json
-      # end
     else
-      # @posts = @user.posts.includes(:user)
       flash.now[:alert] = '足りない項目を入力してください'
       render :new
     end
@@ -42,7 +30,6 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @comment = Comment.new
     @comments = @post.comments.includes(:user).all.order("created_at DESC").page(params[:page]).per(5)
-
   end
 
   def edit
@@ -55,12 +42,7 @@ class PostsController < ApplicationController
 
     if @post.save
       redirect_to post_path(@post), notice: "投稿を編集できました" 
-      # respond_to do |format|
-      #   format.html { redirect_to posts_path, notice: "投稿できました" }
-      #   format.json
-      # end
     else
-      # @posts = @user.posts.includes(:user)
       flash.now[:alert] = '足りない項目を入力してください'
       render :edit
     end
@@ -85,6 +67,5 @@ class PostsController < ApplicationController
   def move_to_index
     redirect_to root_path unless user_signed_in? && current_user.id = @user.id
     redirect_to action: :index unless user_signed_in?
-
   end
 end
