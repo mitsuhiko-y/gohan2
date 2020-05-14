@@ -54,7 +54,7 @@ class PostsController < ApplicationController
     @post.update(post_params)
 
     if @post.save
-      redirect_to posts_path, notice: "更新できました" 
+      redirect_to post_path(@post), notice: "投稿を編集できました" 
       # respond_to do |format|
       #   format.html { redirect_to posts_path, notice: "投稿できました" }
       #   format.json

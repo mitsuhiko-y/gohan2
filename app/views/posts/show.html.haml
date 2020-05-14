@@ -49,10 +49,9 @@
 
     .comment-side
       .comment-side__form
-        - if current_user
-          = form_for [@post, @comment], remote: true do |f|
-            = f.text_area :content, class: 'form__message', placeholder: 'コメントを送ってみましょう'
-            = f.submit 'Send', class: 'form__submit'
+        = form_for [@post, @comment], remote: true do |f|
+          = f.text_area :content, class: 'form__message', placeholder: 'コメントを送ってみましょう'
+          = f.submit 'Send', class: 'form__submit'
 
       .comment-side__index  
 
@@ -63,12 +62,19 @@
 
             %tr
               %td
-                = link_to "#{comment.content}", edit_post_comment_path(comment.post.id, comment.id)
+                %p 
+                  = comment.content
               %td.sender
                 = "by▶︎#{comment.user.nickname}"
                 %br
                   = comment.created_at.strftime("%Y/%m/%d %H:%M")
-      
+
+                  - if current_user.id == comment.user.id
+                    %br
+                      %a.btn{"aria-label" => "Delete", :href => "/posts/#{comment.post.id}/comments/#{comment.id}", "data-method" => "delete", "data-confirm" => "このコメントを削除してよろしいですか?"}
+                        %i.far.fa-trash-alt{"aria-hidden" => "true", :title => "このコメントを削除しますか？"}
+
+
         .pages
           = paginate(@comments)
   

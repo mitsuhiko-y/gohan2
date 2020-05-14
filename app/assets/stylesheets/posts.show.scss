@@ -1,7 +1,7 @@
 .wrapper{
   background-image: url("/images/milk.jpg");
   background-size: cover;
-  min-height: 233vh;
+  min-height: 265vh;
   background-attachment: fixed;
   background-position: center;
   .main{
@@ -63,7 +63,7 @@
         text-align: center;
         padding: 12px;
         width: 100%;
-        height: 107px;
+        height: 135px;
         overflow: scroll;
         word-wrap: break-word;
       }
@@ -180,11 +180,11 @@
                 font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
                 width: 77%;
                 word-wrap: break-word;
-                  a{
+                  p{
                     width: 100%;
                     display: inline-block;
                     text-decoration: none;
-                    height: 86px;
+                    height: 114px;
                     overflow: scroll;
                   }
               }
@@ -195,6 +195,12 @@
                 width: 25%;
                 font-size: 18px;
                 font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+                a{
+                  height: auto;
+                  text-align: right;
+                  width: auto;
+                  font-size: 20px;
+                }
               }
             }
           }
