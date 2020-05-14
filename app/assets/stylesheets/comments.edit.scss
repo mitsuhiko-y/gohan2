@@ -1,0 +1,51 @@
+.wrapper{
+  background-image: url("/images/milk.jpg");
+  background-size: cover;
+  min-height: 233vh;
+  background-attachment: fixed;
+  background-position: center;
+  .main{
+    padding-top: 50px;
+  
+    .edit-form{
+      .edit_comment{
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 20px;
+        font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+        width: 70%;
+        text-align: center;
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        input{
+          width: 89%;
+          border-radius: 5px;
+          font-size: 20px;
+          font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+          overflow: scroll;
+          height: 90px;
+          line-height: 30px;
+          padding-left: 5px;
+        }
+        .form__message{
+          width: 89%;
+          border-radius: 5px;
+          font-size: 20px;
+          font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+          overflow: scroll;
+          height: 90px;
+          line-height: 30px;
+          padding-left: 5px;
+        }
+        .form__submit{
+          height: 50px;
+          width: 10%;
+          border-radius: 5px;
+          background-color: lightseagreen;
+          color: white;
+        }
+      }
+    }
+  }
+}
