@@ -1,0 +1,131 @@
+@charset "UTF-8";
+/* line 1, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.index.scss */
+.main {
+  background-image: url("/images/white_wall.jpeg");
+  min-height: 170vh;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  padding-top: 50px;
+}
+/* line 8, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.index.scss */
+.main .carousel-inner {
+  padding: 5px 37px 30px 37px;
+}
+/* line 10, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.index.scss */
+.main .carousel-inner .carousel-item {
+  padding-top: 20px;
+}
+/* line 12, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.index.scss */
+.main .carousel-inner .carousel-item p {
+  text-align: center;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+  font-size: 15px;
+}
+/* line 18, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.index.scss */
+.main .carousel-inner .icon_about_slide {
+  font-size: 30px;
+}
+/* line 21, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.index.scss */
+.main .carousel-inner .desc_about_slide {
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+  font-size: 20px;
+}
+/* line 25, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.index.scss */
+.main .carousel-inner .card {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  border: none;
+}
+/* line 31, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.index.scss */
+.main .carousel-inner img {
+  border-radius: 50%;
+}
+/* line 33, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.index.scss */
+.main .carousel-inner img .iframe-card-wrap {
+  width: 50%;
+  height: 50%;
+}
+/* line 38, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.index.scss */
+.main .carousel-inner .heart {
+  color: lightseagreen;
+  font-size: 20px;
+}
+/* line 44, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.index.scss */
+.main .carousel-control-prev .carousel-control-prev-icon {
+  display: none;
+}
+/* line 49, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.index.scss */
+.main .carousel-control-next .carousel-control-next-icon {
+  display: none;
+}
+/* line 53, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.index.scss */
+.main .posts-index {
+  justify-content: center;
+  margin-top: 50px;
+  width: 70%;
+  margin-right: auto;
+  margin-left: auto;
+}
+/* line 59, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.index.scss */
+.main .posts-index .icon_about_index {
+  font-size: 50px;
+}
+/* line 62, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.index.scss */
+.main .posts-index .desc_about_index {
+  font-size: 20px;
+  font-weight: bold;
+}
+/* line 66, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.index.scss */
+.main .posts-index .table {
+  font-size: 20px;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+/* line 72, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.index.scss */
+.main .posts-index .table .like {
+  width: 10%;
+}
+/* line 75, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.index.scss */
+.main .posts-index .table td {
+  width: 50%;
+}
+/* line 78, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.index.scss */
+.main .posts-index .table a {
+  width: 100%;
+  text-decoration: none;
+  color: black;
+  display: inline-block;
+}
+/* line 84, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.index.scss */
+.main .posts-index .table .fas {
+  color: lightseagreen;
+}
+/* line 87, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.index.scss */
+.main .posts-index .table .sender {
+  width: 20%;
+  font-size: 18px;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+}
+/* line 94, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.index.scss */
+.main .pages {
+  margin-top: 50px;
+}
+/* line 96, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.index.scss */
+.main .pages .pagination {
+  justify-content: center;
+}
+/* line 98, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.index.scss */
+.main .pages .pagination span {
+  margin-right: 20px;
+  font-size: 18px;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+  margin-bottom: 20px;
+}
+/* line 103, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.index.scss */
+.main .pages .pagination span a {
+  color: black;
+}

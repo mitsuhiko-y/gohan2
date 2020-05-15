@@ -1,0 +1,96 @@
+@charset "UTF-8";
+/* line 1, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.edit.scss */
+.main {
+  height: 100%;
+  background-image: url("/images/knives.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* line 11, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.edit.scss */
+.main .description {
+  text-align: center;
+}
+/* line 14, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.edit.scss */
+.main .edit_area {
+  width: 50%;
+  margin: auto;
+}
+/* line 17, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.edit.scss */
+.main .edit_area .about_page {
+  margin: auto;
+  font-size: 18px;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+}
+/* line 21, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.edit.scss */
+.main .edit_area .about_page .icon {
+  font-size: 30px;
+}
+/* line 25, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.edit.scss */
+.main .edit_area .edit-form {
+  margin-right: auto;
+  margin-left: auto;
+}
+/* line 28, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.edit.scss */
+.main .edit_area .edit-form input, .main .edit_area .edit-form textarea {
+  width: 100%;
+  border: none;
+  margin: 10px 0px 10px 0px;
+  padding: 10px 0px 10px 10px;
+  background-color: white;
+  border-radius: 5px;
+  font-size: 18px;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+  opacity: 0.9;
+}
+/* line 38, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.edit.scss */
+.main .edit_area .edit-form input[type=submit], .main .edit_area .edit-form textarea[type=submit] {
+  background: lightseagreen;
+  color: #fff;
+  width: 100%;
+  cursor: pointer;
+}
+/* line 46, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.edit.scss */
+.main .edit_area .edit-form .edit_post .file-field {
+  width: 100%;
+  border: none;
+  margin: 10px 0px 10px 0px;
+  background-color: white;
+  border-radius: 5px;
+  font-size: 18px;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+  opacity: 0.9;
+}
+/* line 56, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.edit.scss */
+.main .edit_area .edit-form .edit_post .file-field .form__mask__image .fas {
+  display: none;
+}
+/* line 66, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.edit.scss */
+.main .edit_area .edit-form .content {
+  height: 120px;
+}
+/* line 70, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.edit.scss */
+.main .edit_area .destroy {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: right;
+}
+/* line 74, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.edit.scss */
+.main .edit_area .destroy .btn {
+  font-size: 30px;
+  color: red;
+  text-decoration: none;
+}
+/* line 78, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.edit.scss */
+.main .edit_area .destroy .btn .about_delete_button {
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+}
+/* line 86, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.edit.scss */
+.main * {
+  box-sizing: border-box;
+}
