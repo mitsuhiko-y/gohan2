@@ -13,7 +13,7 @@
         .header_set
           - if user_signed_in?
             = link_to image_tag("/images/GoFun_icon.png", alt: "ロゴ", width: "40px"), user_path(current_user.id)
-            = link_to "マイページ", user_path(current_user.id)
+            = link_to "#{current_user.nickname}", user_path(current_user.id)
             = link_to "タイムライン", posts_path
             = link_to "新規投稿", new_post_path
             = link_to "ログアウト", sign_out_path, data: { confirm: "ログアウトしてよろしいですか？" }
