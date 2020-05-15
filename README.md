@@ -67,3 +67,33 @@ Things you may want to cover:
 - belongs_to :post
 
 
+
+
+
+### **https://tabeiku.herokuapp.com/**  
+　
+## 💬 Usage
+
+`$ git clone https://github.com/mitsuhiko-y/gohan2.git`  
+
+$ git clone https://github.com/mitsuhiko-y/gohan2.git
+$ cd hoge
+$ bundle install
+$ rails db:create
+$ rails db:migrate
+$ rails s
+👉 http://localhost:3000
+　
+## :art: Character Design
+
+<p align="center">
+  <img src="https://〜.png" width=70%>  
+</p>　
+
+## 📦 Features
+
+<h3 align="center">- PWA -</h3>
+
+<p align="center">
+  <img src="https://〜.jpg" width=40%>
+</p>
