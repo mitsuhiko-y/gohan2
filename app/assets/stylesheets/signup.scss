@@ -73,6 +73,16 @@
           }
         }
       }
+      #error_explanation{
+        color: lightseagreen;
+        font-weight: bold;
+        display: contents;
+        text-align: center;
+        h2{
+          padding-top: 15px;
+          font-weight: bold;
+        }
+      }
     }
     .actions{
       width: 100%;
@@ -87,5 +97,8 @@
         border: none;
       }
     }
+  }
+  #error_explanation{
+    display: none;
   }
 }

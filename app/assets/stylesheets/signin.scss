@@ -5,10 +5,16 @@
   background-position: center;
   height: 100vh;
   .main{
-    display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 100px;
+    .notification{
+      padding: 35px;
+      .alert{
+        color: lightseagreen;
+        font-weight: bold;
+      }
+    }
   }
   .form {
     width: 30%;
