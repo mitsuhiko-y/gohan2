@@ -59,7 +59,7 @@
 <br>
 
 - ユーザー詳細画面
-![e9f1a11b5798b20c5f6f8bd4bd01e1df](https://user-images.githubusercontent.com/62546610/82107419-71335480-9762-11ea-8ccf-765f4c3045a7.gif)
+![ab2afd7b777ad90e830d3e45d2bccfc8](https://user-images.githubusercontent.com/62546610/82120052-63132180-97be-11ea-9d57-f9fc8ba87974.gif)
 
 下記を確認出来ます。<br>
 ・profile画像<br>
