@@ -1,0 +1,100 @@
+@charset "UTF-8";
+/* line 1, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/user.edit.scss */
+.wrapper {
+  background-image: url("/images/dish.jpg");
+  background-size: 70%;
+  background-attachment: fixed;
+  background-position: center;
+  height: 100vh;
+}
+/* line 7, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/user.edit.scss */
+.wrapper .main {
+  padding-top: 100px;
+  width: 40%;
+  margin-right: auto;
+  margin-left: auto;
+}
+/* line 12, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/user.edit.scss */
+.wrapper .main .about_page {
+  margin: auto;
+  font-size: 18px;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+  padding-bottom: 10px;
+}
+/* line 17, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/user.edit.scss */
+.wrapper .main .about_page .edit_icon {
+  font-size: 30px;
+}
+/* line 21, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/user.edit.scss */
+.wrapper .main .edit_user {
+  width: 100%;
+  height: auto;
+}
+/* line 24, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/user.edit.scss */
+.wrapper .main .edit_user #error_explanation {
+  text-align: center;
+  font-weight: bold;
+}
+/* line 27, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/user.edit.scss */
+.wrapper .main .edit_user #error_explanation h2 {
+  font-weight: bold;
+}
+/* line 31, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/user.edit.scss */
+.wrapper .main .edit_user .field {
+  width: 100%;
+  border: none;
+  margin: 15px 0px 15px 0px;
+  background-color: white;
+  border-radius: 5px;
+}
+/* line 37, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/user.edit.scss */
+.wrapper .main .edit_user .field input, .wrapper .main .edit_user .field textarea {
+  width: 100%;
+  border: none;
+  background-color: white;
+  font-size: 18px;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+  opacity: 0.9;
+  padding: 10px 0px 10px 0px;
+  border-radius: 5px;
+  border: none;
+}
+/* line 49, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/user.edit.scss */
+.wrapper .main .edit_user .actions {
+  width: 100%;
+}
+/* line 51, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/user.edit.scss */
+.wrapper .main .edit_user .actions input {
+  color: white;
+  width: 100%;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-radius: 5px;
+  background: lightseagreen;
+  cursor: pointer;
+  border: none;
+}
+/* line 63, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/user.edit.scss */
+.wrapper .main .footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+/* line 68, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/user.edit.scss */
+.wrapper .main .footer .destroy .btn {
+  font-size: 30px;
+  color: red;
+  text-decoration: none;
+}
+/* line 72, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/user.edit.scss */
+.wrapper .main .footer .destroy .btn .about_delete_button {
+  font-size: 18px;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+}
+/* line 79, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/user.edit.scss */
+.wrapper .main .footer .back a {
+  color: black;
+  font-size: 18px;
+  text-decoration: none;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+}
