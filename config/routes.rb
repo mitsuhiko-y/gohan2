@@ -6,10 +6,10 @@ Rails.application.routes.draw do
     get "sign_out", :to => "users/sessions#destroy" 
   end
   root to: 'app#new' 
-  resources :app
-  resources :users
+  resources :app, only: [:new]
+  resources :users, only: [:show]
   resources :posts do
-    resources :comments
-    resources :likes
+    resources :comments, only: [:create, :destroy]
+    resources :likes, only: [:create, :destroy]
   end
 end
