@@ -58,7 +58,6 @@
 ・投稿一覧（各投稿の詳細画面に遷移できます）
 <br>
 
----
 - ユーザー詳細画面
 ![e9f1a11b5798b20c5f6f8bd4bd01e1df](https://user-images.githubusercontent.com/62546610/82107419-71335480-9762-11ea-8ccf-765f4c3045a7.gif)
 
@@ -87,6 +86,7 @@ $ rails db:create<br>
 $ rails db:migrate<br>
 $ rails s<br>
 👉 http://localhost:3000<br>
+<br>
 
 ---
 ### 🤓 about me
