@@ -93,6 +93,9 @@
     justify-content: center;
     flex-direction: column;
     .posts-index{
+      .desc_about_post{
+        text-align: center;
+      }
       margin-top: 40px;
       width: 70%;
       margin-left: auto;

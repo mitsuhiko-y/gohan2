@@ -3,8 +3,8 @@ Rails.application.routes.draw do
     :sessions => 'users/sessions'   
   } 
   devise_scope :user do
-    delete "sign_out", :to => "users/sessions#destroy" 
-    delete "destroy", :to => "users/registrations#destroy" 
+    get "sign_out", :to => "users/sessions#destroy" 
+    get "users_delete", :to => "users/registrations#destroy" 
   end
   root to: 'app#new' 
   resources :app, only: [:new]

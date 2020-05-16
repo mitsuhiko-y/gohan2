@@ -1,6 +1,6 @@
 .wrapper{
   background-image: url("/images/dish.jpg");
-  background-size: cover;
+  background-size: 70%;
   background-attachment: fixed;
   background-position: center;
   height: 100vh;
@@ -9,20 +9,25 @@
     width: 40%;
     margin-right: auto;
     margin-left: auto;
-    
     .about_page{
       margin: auto;
       font-size: 18px;
       font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+      padding-bottom: 10px;
       .edit_icon{
         font-size: 30px;
       }
-    }
-  
-  
+    }  
     .edit_user{
       width: 100%;
       height:auto;
+      #error_explanation{
+        text-align: center;
+        font-weight: bold;
+        h2{
+          font-weight: bold;
+        }
+      }
       .field{
         width: 100%;
         border: none;
@@ -41,7 +46,6 @@
           border: none;
         }
       }
-      
       .actions{
         width: 100%;
         input{
@@ -55,13 +59,11 @@
           border: none;
         }
       }
-
     }
     .footer{
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-    
       .destroy{
         .btn{
           font-size: 30px;
@@ -73,20 +75,14 @@
           }
         }
       }
-
       .back{
         a{
           color: black;
           font-size: 18px;
           text-decoration: none;
           font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
-
-
         }
-
       }
     }
   } 
-    
-  
 }

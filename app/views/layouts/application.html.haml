@@ -16,7 +16,7 @@
             = link_to "#{current_user.nickname}", user_path(current_user.id)
             = link_to "タイムライン", posts_path
             = link_to "新規投稿", new_post_path
-            %a{"data-method" => "delete", :href => "/sign_out", :rel => "nofollow"} ログアウト
+            = link_to "ログアウト", sign_out_path
 
           - else
             = link_to image_tag("/images/GoFun_icon.png", alt: "ロゴ", width: "40px"), new_app_path

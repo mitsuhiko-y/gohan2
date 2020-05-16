@@ -33,7 +33,7 @@
       .back
         = link_to "<Back", :back
       .destroy
-        %a.btn.btn-danger{"aria-label" => "Delete", :href => "/destroy", "data-method" => "delete", "data-confirm" => "このアカウントを削除してよろしいですか?"}
+        %a.btn.btn-danger{"aria-label" => "Delete", :href => "/users_delete", "data-method" => "get", "data-confirm" => "このアカウントを削除してよろしいですか?"}
           %i.far.fa-trash-alt{"aria-hidden" => "true", :title => "このアカウントを削除しますか？"}
           %h.about_delete_button 削除する
       
