@@ -30,7 +30,8 @@
               = "#{@post.likes.count}　　#{@post.shopname}"
    
       .post-side__content
-        = @post.content
+        = simple_format(@post.content)
+
       .post-side__sender
         = "by▶︎#{@post.user.nickname}"
         %br
@@ -57,8 +58,9 @@
           - @comments.each do |comment|
             %tr
               %td
-                %p 
+                %p
                   = comment.content
+
               %td.sender
                 = "by▶︎#{comment.user.nickname}"
                 %br
