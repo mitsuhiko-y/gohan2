@@ -47,10 +47,7 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   # Override the filename of the uploaded files:
   # Avoid using model.id or version_name here, see uploader/store.rb for details.
-  def filename
-    super.chomp(File.extname(super)) + '.jpg' if original_filename.present?
   #   "something.jpg" if original_filename
-  end
 
   def filename
     time = Time.now
@@ -58,6 +55,10 @@ class ImageUploader < CarrierWave::Uploader::Base
     name.downcase
   end
 
+  def filename
+    super.chomp(File.extname(super)) + '.jpg' if original_filename.present?
+  end
+  
   process :fix_exif_rotation
     def fix_exif_rotation
       manipulate! do |img|
