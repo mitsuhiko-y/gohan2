@@ -100,7 +100,11 @@ Things you may want to cover:
 ・いいね機能
 
 
-### 使い方
+### 使い方　（主要画面のキャプチャを用いて簡単に説明させていただきます）
+・ユーザー新規登録（登録済の場合はログイン）をします。
+
+
+![b0fe2e6f4a71e4b834b2e9542f34507f](https://user-images.githubusercontent.com/62546610/82048824-43adc300-96f0-11ea-9158-8d5e22a1cc25.jpg)
 
 <img width="738" alt="9cd2beac72d5400fecaee0f9cac12efc" src="https://user-images.githubusercontent.com/62546610/82051177-5d510980-96f4-11ea-8ec8-b45168866dea.png">
 
@@ -109,9 +113,22 @@ Things you may want to cover:
 
 
 
-![b0fe2e6f4a71e4b834b2e9542f34507f](https://user-images.githubusercontent.com/62546610/82048824-43adc300-96f0-11ea-9158-8d5e22a1cc25.jpg)
+・投稿詳細画面
+　投稿されたGoogleストリートビュー・画像・本文が表示されます。
+　いいねボタンを押していいねをつけたり、コメントを送ることが出来ます。
 
+![1b88de7dd3849d330e343e2dd7df0814](https://user-images.githubusercontent.com/62546610/82106988-5ca18d00-975f-11ea-847b-dd32dc28df67.gif)
 
+・ユーザー詳細画面
+![e9f1a11b5798b20c5f6f8bd4bd01e1df](https://user-images.githubusercontent.com/62546610/82107419-71335480-9762-11ea-8ccf-765f4c3045a7.gif)
+
+  下記を確認出来ます。
+    profile画像
+    自身が投稿した数
+    自身の投稿一覧（各投稿の詳細画面に遷移できます）
+    いいねした数
+    いいねした（他ユーザーの）投稿一覧（各投稿の詳細画面に遷移できます）
+  また、ユーザー情報編集画面に遷移出来ます。
 
 
 ## 🌐 App URL
