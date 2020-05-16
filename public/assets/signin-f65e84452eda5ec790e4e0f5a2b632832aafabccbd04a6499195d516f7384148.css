@@ -1,0 +1,108 @@
+@charset "UTF-8";
+/* line 1, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/signin.scss */
+.wrapper {
+  background-image: url("/images/white_wood.jpeg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  height: 100vh;
+}
+/* line 7, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/signin.scss */
+.wrapper .main {
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+}
+/* line 11, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/signin.scss */
+.wrapper .main .notification {
+  padding: 35px;
+}
+/* line 13, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/signin.scss */
+.wrapper .main .notification .alert {
+  color: lightseagreen;
+  font-weight: bold;
+}
+/* line 19, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/signin.scss */
+.wrapper .form {
+  width: 30%;
+  height: auto;
+  margin-right: auto;
+  margin-left: auto;
+}
+/* line 24, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/signin.scss */
+.wrapper .form .about_page {
+  margin: auto;
+  font-size: 18px;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+}
+/* line 28, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/signin.scss */
+.wrapper .form .about_page .icon {
+  font-size: 35px;
+}
+/* line 32, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/signin.scss */
+.wrapper .form .new_user {
+  width: 100%;
+  height: 100%;
+}
+/* line 35, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/signin.scss */
+.wrapper .form .new_user .field {
+  width: 100%;
+  border: none;
+  margin: 15px 0px 15px 0px;
+  background-color: white;
+  border-radius: 5px;
+}
+/* line 41, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/signin.scss */
+.wrapper .form .new_user .field input, .wrapper .form .new_user .field textarea {
+  width: 100%;
+  border: none;
+  background-color: white;
+  font-size: 18px;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+  opacity: 0.9;
+  padding: 10px 0px 10px 0px;
+  border-radius: 5px;
+  border: none;
+}
+/* line 53, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/signin.scss */
+.wrapper .form .new_user .file-field {
+  width: 100%;
+  border: none;
+  margin: 15px 0px 15px 0px;
+  padding: 10px 0px 10px 0px;
+  background-color: white;
+  border-radius: 5px;
+  font-size: 18px;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+  opacity: 0.9;
+}
+/* line 63, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/signin.scss */
+.wrapper .form .new_user .file-field input, .wrapper .form .new_user .file-field textarea {
+  font-size: 18px;
+  border: none;
+}
+/* line 67, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/signin.scss */
+.wrapper .form .new_user .file-field #user_image {
+  display: none;
+}
+/* line 71, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/signin.scss */
+.wrapper .form .new_user .file-field .image .fas {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+/* line 79, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/signin.scss */
+.wrapper .form .actions {
+  width: 100%;
+}
+/* line 81, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/signin.scss */
+.wrapper .form .actions input {
+  color: white;
+  width: 100%;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-radius: 5px;
+  background: lightseagreen;
+  cursor: pointer;
+  border: none;
+}
