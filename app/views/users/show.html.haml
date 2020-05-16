@@ -24,29 +24,39 @@
             .name
               - if current_user.id == @user.id
                 = link_to "#{@user.nickname}", edit_user_registration_path(current_user.id)
-            .posts-count
-              = "posts ▶︎ #{@user.posts.length}"
-            .likes-count
-              = "likes ▶︎ #{@user.likes.length}"
             .liked-posts
-
               #accordionExample.accordion
                 .card
                   #headingOne.card-header
                     %h2.mb-0
                       %button.btn.btn-link{"aria-controls" => "collapseOne", "aria-expanded" => "false", "data-target" => "#collapseOne", "data-toggle" => "collapse", :type => "button"}
-                        いいねした投稿
+                        = "いいねした投稿 ▶︎ #{@user.liked_posts.count}件"
                   #collapseOne.collapse.show{"aria-labelledby" => "headingOne", "data-parent" => "#accordionExample"}
                     .card-body
                       - @user.liked_posts.each do |post|
                         =link_to post_path(post) do
                           = "#{post.shopname} by #{post.user.nickname}"
 
+              #accordionExample.accordion
+                .card
+                  #headingOne.card-header
+                    %h2.mb-0
+                      %button.btn.btn-link{"aria-controls" => "collapseOne", "aria-expanded" => "false", "data-target" => "#collapseOne", "data-toggle" => "collapse", :type => "button"}
+                        = "コメントした投稿 ▶︎ #{@user.comments.count}件"
+                  #collapseOne.collapse.show{"aria-labelledby" => "headingOne", "data-parent" => "#accordionExample"}
+                    .card-body
+                      - @user.comments.each do |comment|
+                        =link_to post_path(comment.post) do
+                          = "#{comment.post.shopname} by #{comment.post.user.nickname}"
+
       .footer
         .posts-index
           - if current_user.posts.count > 0
             .desc
-              投稿一覧
+              %i.icon_about_index.far.fa-comment-dots
+              %h.desc_about_index
+                = "投稿一覧 ▶︎ #{@user.posts.count}件"
+
             %table.table.table-hover
               - @posts.each do |post|
                 %tr
