@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   before_action :set_group
-  before_action :move_to_index, except: [:index, :show, :search]
+  before_action :move_to_index
+  before_action :move_to_mypage
 
   def index
     @posts = Post.all.order("created_at DESC").page(params[:page]).per(5)
@@ -65,7 +66,13 @@ class PostsController < ApplicationController
   end
 
   def move_to_index
-    redirect_to root_path unless user_signed_in? && current_user.id = @user.id
-    redirect_to action: :index unless user_signed_in?
+    redirect_to root_path unless user_signed_in?
+    # redirect_to action: :index unless user_signed_in?
   end
+
+  def move_to_mypage
+    @post = Post.find(params[:id])
+    redirect_to user_path(current_user) unless current_user.id == @post.user.id
+  end
+
 end
