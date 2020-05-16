@@ -100,17 +100,17 @@ https://qiita.com/777mountain
 ---
 <p align="center">
 　
-<img src="https://user-images.githubusercontent.com/39142850/71774533-1ddf1780-2fb4-11ea-8560-753bed352838.png" width="70px;" style="max-width:100%;"><br>
+<img src="https://user-images.githubusercontent.com/39142850/71774533-1ddf1780-2fb4-11ea-8560-753bed352838.png" width="70px;" style="max-width:100%;">
 
-<img src="https://user-images.githubusercontent.com/39142850/71774548-731b2900-2fb4-11ea-99ba-565546c5acb4.png" height="60px;" style="max-width:100%;"><br>
+<img src="https://user-images.githubusercontent.com/39142850/71774548-731b2900-2fb4-11ea-99ba-565546c5acb4.png" height="60px;" style="max-width:100%;"><br><br>
 　　
-<img src="https://user-images.githubusercontent.com/39142850/71774618-b32edb80-2fb5-11ea-9050-d5929a49e9a5.png" height="60px;" style="max-width:100%;"><br>
+<img src="https://user-images.githubusercontent.com/39142850/71774618-b32edb80-2fb5-11ea-9050-d5929a49e9a5.png" height="60px;" style="max-width:100%;">
 　
-<img src="https://user-images.githubusercontent.com/39142850/71774644-115bbe80-2fb6-11ea-822c-568eabde5228.png" height="60px" style="max-width:100%;"><br>
+<img src="https://user-images.githubusercontent.com/39142850/71774644-115bbe80-2fb6-11ea-822c-568eabde5228.png" height="60px" style="max-width:100%;">
 
-<img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/600614/4d2655e2-07fc-c442-e147-1f97ad10962a.png" height="60px" style="max-width:100%;"><br>
+<img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/600614/4d2655e2-07fc-c442-e147-1f97ad10962a.png" height="60px" style="max-width:100%;">
 
-<img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/600614/dda4e560-0af8-d3cd-5375-96cbeb5b7a79.jpeg" height="60px;" style="max-width:100%;"><br>
+<img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/600614/dda4e560-0af8-d3cd-5375-96cbeb5b7a79.jpeg" height="60px;" style="max-width:100%;">
 
 </p>
 
