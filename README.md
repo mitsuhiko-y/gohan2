@@ -72,6 +72,16 @@
 <br>
 
 ---
+### 注力した点
+- サイト全体の見やすさ（から来る楽しさ）
+　・フォント・フォントサイズ・色づかいを統一し、ページ間で差異が生じないようにしました。<br>
+　・基本的にはモノクロな色を使用し、差し色として一部にlightseagreenを使用しました。<br>
+　・モノトーンで無機質な写真を背景に設定し、ユーザーが落ち着いて楽しめる雰囲気にしました。<br>
+　・投稿一覧を箇条書きに表示するだけではなく、最新6投稿のスライドを作成することで動的な楽しさをプラスしました。<br>
+　・投稿・コメント・アカウントの削除機能について、font-awesomeのアイコンを使用したボタンを作り、<br>
+　　ユーザーにとって直感的で分かりやすいものにしました。<br>
+
+---
 ### 🌐 App URL
 #### **https://tabeiku.herokuapp.com/**  
 
@@ -98,7 +108,8 @@ https://github.com/mitsuhiko-y
 https://qiita.com/777mountain
 
 ---
-　
+### ツール
+
 <img src="https://user-images.githubusercontent.com/39142850/71774533-1ddf1780-2fb4-11ea-8560-753bed352838.png" width="70px;" style="max-width:100%;">
 
 <img src="https://user-images.githubusercontent.com/39142850/71774548-731b2900-2fb4-11ea-99ba-565546c5acb4.png" height="60px;" style="max-width:100%;">
