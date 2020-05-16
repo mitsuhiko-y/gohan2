@@ -39,13 +39,6 @@
 <img width="574" alt="0404bcc58d906bdf1583fcaf6bf5f5da" src="https://user-images.githubusercontent.com/62546610/82051483-e8320400-96f4-11ea-8bee-288f840515b3.png">
 <br>
 
-- 投稿詳細画面
-![1b88de7dd3849d330e343e2dd7df0814](https://user-images.githubusercontent.com/62546610/82106988-5ca18d00-975f-11ea-847b-dd32dc28df67.gif)
-
-　投稿されたGoogleストリートビュー・画像・本文が表示されます。<br>
-　いいねボタンを押していいねをつけたり、コメントを送ることができます。
-<br>
-
 - 新規投稿画面
 ![79d017014df5900ed55b7bdfd78986dc](https://user-images.githubusercontent.com/62546610/82109692-f4f53d00-9772-11ea-9c9b-be45aa146fa8.jpg)
 <br>
@@ -58,6 +51,13 @@
 ・投稿一覧（各投稿の詳細画面に遷移できます）
 <br>
 
+- 投稿詳細画面
+![1b88de7dd3849d330e343e2dd7df0814](https://user-images.githubusercontent.com/62546610/82106988-5ca18d00-975f-11ea-847b-dd32dc28df67.gif)
+
+　投稿されたGoogleストリートビュー・画像・本文が表示されます。<br>
+　いいねボタンを押していいねをつけたり、コメントを送ることができます。
+<br>
+
 - ユーザー詳細画面
 ![e9f1a11b5798b20c5f6f8bd4bd01e1df](https://user-images.githubusercontent.com/62546610/82107419-71335480-9762-11ea-8ccf-765f4c3045a7.gif)
 
@@ -67,6 +67,7 @@
 ・自身の投稿一覧（各投稿の詳細画面に遷移できます）<br>
 ・いいねした数<br>
 ・いいねした（他ユーザーの）投稿一覧（各投稿の詳細画面に遷移できます）<br>
+<br>
 また、ユーザー情報編集画面に遷移できます。
 <br>
 
