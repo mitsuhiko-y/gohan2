@@ -71,14 +71,14 @@
       margin-left: auto;
       margin-right: auto;
       text-align: right;
-      .btn{
-        font-size: 30px;
-        color: red;
-        text-decoration: none;
-        .about_delete_button{
+      .button_to{
+        input{
+          border: none;
+          background: none;
+          text-decoration: underline;
           font-size: 18px;
-          font-weight: bold;
-          font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+          font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+          color: red;
         }
       }
     }

@@ -28,6 +28,4 @@
         = f.submit '上書きする', class: 'form__submit'
 
   .destroy
-    %a.btn.btn-danger{"aria-label" => "Delete", :href => "/posts/#{@post.id}", "data-method" => "delete", "data-confirm" => "この投稿を削除してよろしいですか?"}
-      %i.far.fa-trash-alt{"aria-hidden" => "true", :title => "この投稿を削除しますか？"}
-      %h.about_delete_button 削除する
+    = button_to '投稿を削除', "/posts/#{@post.id}", method: :delete, data: { confirm: '投稿を削除してよろしいですか？' }
