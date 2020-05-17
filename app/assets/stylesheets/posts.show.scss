@@ -195,6 +195,13 @@
                 width: 25%;
                 font-size: 18px;
                 font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+                .button_to{
+                  input{
+                    border: none;
+                    background: none;
+                    text-decoration: underline;
+                  }
+                }
                 a{
                   height: auto;
                   text-align: right;

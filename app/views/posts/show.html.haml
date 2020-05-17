@@ -67,10 +67,7 @@
                   = comment.created_at.strftime("%Y/%m/%d %H:%M")
                   - if current_user.id == comment.user.id
                     %br
-                      = button_to 'コメント削除', "/posts/#{comment.post.id}/comments/#{comment.id}", method: :delete
-                      -# %a.btn{"aria-label" => "Delete", :href => "/posts/#{comment.post.id}/comments/delete", "data-method" => "get", "data-confirm" => "このコメントを削除してよろしいですか?"}
-                        %i.far.fa-trash-alt{"aria-hidden" => "true", :title => "このコメントを削除しますか？"}
-
+                      = button_to 'コメント削除', "/posts/#{comment.post.id}/comments/#{comment.id}", method: :delete, data: { confirm: 'コメントを削除してよろしいですか？' }
 
         .pages
           = paginate(@comments)
