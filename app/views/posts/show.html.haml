@@ -21,11 +21,11 @@
       .post-side__title
         .post__likes
           -if current_user.already_liked?(@post)
-            = button_to post_like_path(@post), method: :delete, remote: true do
+            = button_to post_like_path(@post), method: :delete do
               %i.like.fas.fa-heart
               = "#{@post.likes.count}　　#{@post.shopname}"
           -else
-            = button_to post_likes_path(@post), remote: true do
+            = button_to post_likes_path(@post) do
               %i.dislike.far.fa-heart
               = "#{@post.likes.count}　　#{@post.shopname}"
    
