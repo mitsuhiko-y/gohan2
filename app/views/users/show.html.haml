@@ -24,6 +24,8 @@
             .name
               - if current_user.id == @user.id
                 = link_to "#{@user.nickname}", edit_user_registration_path(current_user.id)
+              - else
+                = @user.nickname
             .liked-posts
               #accordionExample.accordion
                 .card
