@@ -1,0 +1,65 @@
+@charset "UTF-8";
+/* line 1, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.new.scss */
+.main {
+  background-size: cover;
+  height: 100%;
+  background-image: url(/images/knives.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+/* line 10, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.new.scss */
+.main .description {
+  text-align: center;
+}
+/* line 13, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.new.scss */
+.main .form {
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
+}
+/* line 17, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.new.scss */
+.main .form .about_page {
+  padding-left: 10px;
+  padding-bottom: 10px;
+  margin: auto;
+  font-size: 18px;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+}
+/* line 23, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.new.scss */
+.main .form .about_page .icon {
+  font-size: 36px;
+}
+/* line 28, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.new.scss */
+.main .form .new_post input, .main .form .new_post textarea {
+  width: 100%;
+  border: none;
+  margin: 10px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 5px;
+  font-size: 18px;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+  opacity: 0.9;
+}
+/* line 38, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.new.scss */
+.main .form .new_post input[type=submit], .main .form .new_post textarea[type=submit] {
+  background: lightseagreen;
+  color: #fff;
+  width: 100%;
+  cursor: pointer;
+}
+/* line 45, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.new.scss */
+.main .form .new_post .view {
+  height: 122px;
+}
+/* line 48, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.new.scss */
+.main .form .new_post .content {
+  height: 128px;
+}
+/* line 53, /Users/yamazakimitsuhiko/projects/gohan2/app/assets/stylesheets/posts.new.scss */
+.main * {
+  box-sizing: border-box;
+}
