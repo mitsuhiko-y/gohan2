@@ -33,7 +33,7 @@
         = simple_format(@post.content)
 
       .post-side__sender
-        = "by▶︎#{@post.user.nickname}"
+        = link_to "by▶︎ #{@post.user.nickname}", user_path(@post.user)
         %br
           = @post.created_at.strftime("%Y/%m/%d %H:%M")
       .post-side__edit
@@ -44,7 +44,10 @@
       .post-side__liked-user
         いいねしたユーザー▶︎
         - @post.liked_users.each do |user|
-          = "　#{user.nickname}"
+          - if user.image?
+            = link_to image_tag("#{user.image}", alt: "アイコン", width: "70px", height: "70px"), user_path(user)
+          - else
+            = link_to image_tag("/images/no_image.jpg", alt: "アイコン", width: "70px"), user_path(user)
 
     .comment-side
       .comment-side__form

@@ -71,6 +71,9 @@
         font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
         text-align: right;
         padding: 12px;
+        a{
+          text-decoration: underline;
+        }
       }
       &__edit{
         font-size: 18px;
@@ -79,7 +82,8 @@
         padding: 13px;
         .btn{
           font-size: 18px;
-          text-decoration: underline;      
+          text-decoration: underline;
+          padding: 0px;
           .about_delete_button{
             font-size: 18px;
             font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
@@ -96,6 +100,13 @@
         padding: 13px;
         overflow: scroll;
         height: 85px;
+        a{
+          text-decoration: underline;
+          padding-left: 5px;
+          img{
+            border-radius: 50%;
+          }
+        }
       }
     }
     .like-side{
