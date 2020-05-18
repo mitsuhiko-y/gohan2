@@ -16,8 +16,8 @@
 
     = form_for [@post] do |f|
       = f.text_field :shopname, class: 'shopname', placeholder: 'お店の名前'
-      = f.text_field :view, class: 'view', placeholder: 'ストリートビュー'
+      = f.text_area :view, class: 'view', placeholder: '共有したいGoogleストリートビューの"共有"ボタンから埋め込み用HTMLを確認してこちらに貼ってみましょう。&#13;&#10;例）<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12967.0806533878!2d139.7016358!3d35.6580339!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x337328def1e2ab26!2z5riL6LC36aeF!5e0!3m2!1sja!2sjp!4v1589774591958!5m2!1sja!2sjp" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>'.html_safe
       = f.file_field :image, class: 'image', placeholder: '画像'
       = f.hidden_field :image_cache
-      = f.text_area :content, class: 'content', placeholder: 'お店に行った感想など', rows: "3"
+      = f.text_area :content, class: 'content', placeholder: 'お店に行った感想など自由に書いてみましょう', rows: "3"
       = f.submit '投稿する', class: 'form__submit'
