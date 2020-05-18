@@ -11,11 +11,12 @@
       .about_page
         %i.icon.fas.fa-door-open
         %h.about_icon ログインページです。
+        %p.desc 下記フォームに既に入力されている初期値のままログインするとテストアカウントをご利用いただけます。
 
       = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
         .field
-          = f.email_field :email, autofocus: true, autocomplete: "email",placeholder: 'メールアドレス'
+          = f.email_field :email, autofocus: true, autocomplete: "email",placeholder: 'メールアドレス', value: "test@test"
         .field
-          = f.password_field :password, autocomplete: "current-password",placeholder: 'パスワード'
+          = f.password_field :password, autocomplete: "current-password",placeholder: 'パスワード', value: "ttt000"
         .actions
           = f.submit "ログイン"
