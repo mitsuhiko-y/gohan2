@@ -4,11 +4,10 @@
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %title Gohan2
     = csrf_meta_tags
-    %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"}
     = stylesheet_link_tag    'application', media: 'all'
     = stylesheet_link_tag    'users.show', media: 'all'
     = javascript_include_tag 'application'
-    
+    %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"}
 
 %body
   .main
