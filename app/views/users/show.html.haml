@@ -4,79 +4,69 @@
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %title Gohan2
     = csrf_meta_tags
-    %link{:crossorigin => "anonymous", :href => "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css", :integrity => "sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh", :rel => "stylesheet"}
+    %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"}
     = stylesheet_link_tag    'application', media: 'all'
     = stylesheet_link_tag    'users.show', media: 'all'
     = javascript_include_tag 'application'
+    
 
 %body
   .main
-    .container-fluid
-      .upper
-        .profile
-          .image
-            -if @user.image?
-              = image_tag "#{@user.image}", alt: "プロフィール写真", width: "100px"
-            -else
-              = image_tag "/images/no_image.jpg", alt: "no image", width: "100px"
+    .upper
+      .profile
+        .image
+          -if @user.image?
+            = image_tag "#{@user.image}", alt: "プロフィール写真", width: "100px"
+          -else
+            = image_tag "/images/no_image.jpg", alt: "no image", width: "100px"
 
-          .datas
-            .name
-              - if current_user.id == @user.id
-                = link_to "#{@user.nickname}", edit_user_registration_path(current_user.id)
-              - else
-                = @user.nickname
-            .liked-posts
-              #accordionExample.accordion
-                .card
-                  #headingOne.card-header
-                    %h2.mb-0
-                      %button.btn.btn-link{"aria-controls" => "collapseOne", "aria-expanded" => "false", "data-target" => "#collapseOne", "data-toggle" => "collapse", :type => "button"}
-                        = "いいねした投稿 ▶︎ #{@user.liked_posts.count}件"
-                  #collapseOne.collapse.show{"aria-labelledby" => "headingOne", "data-parent" => "#accordionExample"}
-                    .card-body
-                      - @user.liked_posts.each do |post|
-                        =link_to post_path(post) do
-                          = "#{post.shopname} by #{post.user.nickname}"
+        .datas
+          .name
+            - if current_user.id == @user.id
+              = link_to "#{@user.nickname}", edit_user_registration_path(current_user.id)
+            - else
+              = @user.nickname
+          .liked-posts
+            %button.liked_posts_button
+              = "いいねした投稿 ▶︎ #{@user.liked_posts.count}件"
+              .liked_cards_body
+                .cards
+                  - @user.liked_posts.each do |post|
+                    =link_to post_path(post) do
+                      = "#{post.shopname} by #{post.user.nickname}"
+          .commented-posts
+            %button.commented_posts_button
+              = "コメントした投稿 ▶︎ #{@user.comments.count}件"
+              .commented_cards_body
+                .cards
+                  - @user.comments.each do |comment|
+                    =link_to post_path(comment.post) do
+                      = "#{comment.post.shopname} by #{comment.post.user.nickname}"
 
-              #accordionExample.accordion
-                .card
-                  #headingOne.card-header
-                    %h2.mb-0
-                      %button.btn.btn-link{"aria-controls" => "collapseOne", "aria-expanded" => "false", "data-target" => "#collapseOne", "data-toggle" => "collapse", :type => "button"}
-                        = "コメントした投稿 ▶︎ #{@user.comments.count}件"
-                  #collapseOne.collapse.show{"aria-labelledby" => "headingOne", "data-parent" => "#accordionExample"}
-                    .card-body
-                      - @user.comments.each do |comment|
-                        =link_to post_path(comment.post) do
-                          = "#{comment.post.shopname} by #{comment.post.user.nickname}"
+    .footer
+      .posts-index
+        - if current_user.posts.count > 0
+          .desc
+            %i.icon_about_index.far.fa-comment-dots
+            %h.desc_about_index
+              = "投稿一覧 ▶︎ #{@user.posts.count}件"
 
-      .footer
-        .posts-index
-          - if current_user.posts.count > 0
-            .desc
-              %i.icon_about_index.far.fa-comment-dots
-              %h.desc_about_index
-                = "投稿一覧 ▶︎ #{@user.posts.count}件"
+          %table.table.table-hover
+            - @posts.each do |post|
+              %tr
+                %td.like
+                  %i.fas.fa-heart
+                  = post.likes.count
+                %td
+                  = link_to "#{post.shopname}", post_path(post)
+                %td.date
+                  = post.created_at.strftime("%Y/%m/%d %H:%M")
+        - else
+          %p.desc_about_post まだ投稿がありません。おいしかった思い出を気軽に投稿してみましょう。
+          %p.new_post_button 
+            = link_to "投稿する", new_post_path
 
-            %table.table.table-hover
-              - @posts.each do |post|
-                %tr
-                  %td.like
-                    %i.fas.fa-heart
-                    = post.likes.count
-                  %td
-                    = link_to "#{post.shopname}", post_path(post)
-                  %td.date
-                    = post.created_at.strftime("%Y/%m/%d %H:%M")
-          - else
-            %p.desc_about_post まだ投稿がありません。おいしかった思い出を気軽に投稿してみましょう。
-            %p.new_post_button 
-              = link_to "投稿する", new_post_path
+        .pages
+          = paginate(@posts)
 
-          .pages
-            = paginate(@posts)
-
-    %script{:type => "module", :crossorigin => "anonymous", :integrity => "sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n", :src => "https://code.jquery.com/jquery-3.4.1.slim.min.js"}
-    %script{:type => "module", :crossorigin => "anonymous", :integrity => "sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo", :src => "https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"}
-    %script{:type => "module", :crossorigin => "anonymous", :integrity => "sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6", :src => "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"}
+%script{:src => "script.js"}

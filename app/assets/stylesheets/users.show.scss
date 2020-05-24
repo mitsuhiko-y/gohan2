@@ -32,54 +32,88 @@
             color:black;
           }
         }
-        .posts-count{
-          margin-bottom: 20px;
-          font-size: 18px;
-          font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
-        }
-        .likes-count{
-          margin-bottom: 20px;
-          font-size: 18px;
-          font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
-        }
         .liked-posts{
           margin-bottom: 20px;
-          .accordion{
-            width: 300px;
-            .card{
+          .liked_posts_button{
+            font-size: 16px;
+            font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+            background: darkgray;
+            text-align: left;
+            border-radius: 5px;
+            width: 290px;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            .liked_cards_body{
               background-color: gray;
-              margin-bottom: 20px;
-              .card-header{
-                padding-top: 3px;
-                padding-bottom: 3px;
-                padding-left: 9px;
-                .btn{
-                  color:white;
-                  padding: 0px;
-                  font-size: 16px;
+              overflow: scroll;
+              height: 97px;
+              padding: 0;
+              display: none;
+              font-size: 16px;
+              background: darkgray;
+              .cards{
+                display: flex;
+                flex-direction: column;
+                font-size: 16px;
+                font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+                padding-left: 10px;
+                a{
+                  color: white;
+                  text-decoration: none;
                 }
-              }
-              .collapse{
-                overflow: scroll;
-                height: 77px;
-                padding: 0;
-                .card-body{
-                  padding-top: 3px;
-                  padding-bottom: 3px;
-                  a{
-                    color:white;
-                    font-size: 16px;
-                    padding-top: 0px;
-                  }
+                a:hover{
+                  text-decoration: none;
+                  color: #fff;
+                  background-color: lightseagreen;
+                  opacity: 0.7;
+                  box-shadow: none;
+                  color: white;
                 }
-              }
+              }            
             }
           }
-          .card-body{
-            display: flex;
-            flex-direction: column;
-            font-size: 18px;
+        }
+        .commented-posts{
+          margin-bottom: 20px;
+          .commented_posts_button{
+            font-size: 16px;
             font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+            background: darkgray;
+            text-align: left;
+            border-radius: 5px;
+            width: 290px;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            .commented_cards_body{
+              background-color: gray;
+              overflow: scroll;
+              height: 97px;
+              padding: 0;
+              display: none;
+              font-size: 16px;
+              background: darkgray;
+              .cards{
+                display: flex;
+                flex-direction: column;
+                font-size: 16px;
+                font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+                padding-left: 10px;
+                a{
+                  color: white;
+                  text-decoration: none;
+                }
+                a:hover{
+                  text-decoration: none;
+                  color: #fff;
+                  background-color: lightseagreen;
+                  opacity: 0.7;
+                  box-shadow: none;
+                  color: white;
+                }
+              }            
+            }
           }
         }
       }
