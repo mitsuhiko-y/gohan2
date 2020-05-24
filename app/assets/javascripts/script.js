@@ -6,6 +6,7 @@ $(function(){
     }
   );
 
+
   $('.commented_posts_button').click(
     function() {
       $('.commented_cards_body').slideDown();
