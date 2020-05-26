@@ -48,7 +48,7 @@
           = f.text_area :content, class: 'form__message', placeholder: 'コメントを送ってみましょう'
           = f.submit 'コメントする', class: 'form__submit'
 
-      .comment-side__index  
+      .comment-side__#index
         %i.comments.far.fa-comments
         %table.table.table-hover
           - @comments.each do |comment|
