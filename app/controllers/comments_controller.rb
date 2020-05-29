@@ -2,7 +2,7 @@ class CommentsController < ApplicationController
   def create
     @comment = Comment.create(comment_params)
     if @comment.save
-      redirect_to post_path(@comment.post.id), notice: "コメントできました"
+      redirect_to post_path(@comment.post.id, anchor: 'new_comment'), notice: "コメントできました"
     else
       flash.now[:alert] = 'コメントを入力してください。'
       render post_path(@comment.post)
@@ -12,7 +12,8 @@ class CommentsController < ApplicationController
   def destroy
     comment = Comment.find(params[:id])
     comment.destroy
-    redirect_to post_path(comment.post.id), notice: "コメントを削除しました"
+    redirect_to post_path(comment.post.id, anchor: 'new_comment'), notice: "コメントを削除しました"
+
   end
 
   private
