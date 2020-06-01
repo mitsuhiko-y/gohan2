@@ -81,16 +81,31 @@
         font-size: 18px;
         font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
         text-align: right;
-        padding: 12px;
+        padding: 12px 12px 0px 12px;
         a{
           text-decoration: underline;
+        }
+        &__info{
+          &__image{
+            a{
+              img{
+                border-radius: 50%;
+              }
+              img:hover{
+                border: outset;
+                color: lightseagreen;
+              }
+            }
+          }
+          &__nickname{
+          }
         }
       }
       &__edit{
         font-size: 18px;
         font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
         text-align: right;
-        padding: 13px;
+        padding: 0px 12px 12px 12px;
         .btn{
           font-size: 18px;
           text-decoration: underline;
@@ -111,11 +126,21 @@
         padding: 0px 13px 13px 13px;
         overflow: scroll;
         height: 85px;
-        a{
+        .liked_user_name{
+          opacity: 0;
+        }
+        .liked_user_name:hover{
+          opacity: 1;
+        }
+          a{
           text-decoration: underline;
           padding-left: 5px;
           img{
             border-radius: 50%;
+          }
+          img:hover{
+            border: outset;
+            color: lightseagreen;
           }
         }
       }
@@ -195,7 +220,6 @@
               height: auto;
               td{
                 text-align: left;
-                line-height: auto;
                 padding: 10px;
                 height: 86px;
                 font-size: 20px;
@@ -217,11 +241,15 @@
                 width: 30%;
                 font-size: 18px;
                 font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
-                .button_to{
-                  input{
-                    border: none;
-                    background: none;
-                    text-decoration: underline;
+                .sender_name{
+                  height: auto;
+                  text-align: center;
+                }
+                .delete_button{
+                  display: flex;
+                  justify-content: space-around;
+                  .button_to{
+                    padding-right: 10px;
                   }
                 }
                 a{
@@ -229,6 +257,15 @@
                   text-align: right;
                   width: auto;
                   font-size: 20px;
+                  img{
+                    border-radius: 50%;
+                    display: block;
+                    margin: auto;
+                  }
+                  img:hover{
+                    border: outset;
+                    color: lightseagreen;
+                  }
                 }
               }
             }

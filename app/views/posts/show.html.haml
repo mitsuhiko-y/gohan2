@@ -2,7 +2,7 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title Gohan2
+    %title GoFun
     = csrf_meta_tags
     %link{:crossorigin => "anonymous", :href => "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css", :integrity => "sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh", :rel => "stylesheet"}/
     = stylesheet_link_tag    'application', media: 'all'
@@ -26,8 +26,14 @@
         = render partial: 'posts/posts', collection: @posts, as: :post
 
       .post-side__sender
-        = link_to "by▶︎ #{@post.user.nickname}", user_path(@post.user)
-        %br
+        .post-side__sender__info
+          .post-side__sender__info__image
+            - if @post.user.image?
+              = link_to image_tag("#{@post.user.image}", alt: "アイコン", width: "70px", height: "70px"), user_path(@post.user)
+            - else
+              = link_to image_tag("/images/no_image.jpg", alt: "アイコン", width: "70px"), user_path(@post.user)
+          .post-side__sender__info__nickname
+            = @post.user.nickname
           = @post.created_at.strftime("%Y/%m/%d %H:%M")
       .post-side__edit
         - if current_user.id == @post.user.id
@@ -38,9 +44,11 @@
         いいねしたユーザー▶︎
         - @post.liked_users.each do |user|
           - if user.image?
-            = link_to image_tag("#{user.image}", alt: "アイコン", width: "70px", height: "70px"), user_path(user)
+            = link_to image_tag("#{user.image}", alt: "アイコン", width: "70px", height: "70px", :title => "#{user.nickname}"), user_path(user)
           - else
-            = link_to image_tag("/images/no_image.jpg", alt: "アイコン", width: "70px"), user_path(user)
+            = link_to image_tag("/images/no_image.jpg", alt: "アイコン", width: "70px", :title => "#{user.nickname}"), user_path(user)
+
+
 
     .comment-side
       .comment-side__form
@@ -58,12 +66,19 @@
                   = comment.content
 
               %td.sender
-                = "by▶︎#{comment.user.nickname}"
-                %br
-                  = comment.created_at.strftime("%Y/%m/%d %H:%M")
+                - if comment.user.image?
+                  = link_to image_tag("#{comment.user.image}", alt: "アイコン", width: "70px", height: "70px"), user_path(comment.user)
+                - else
+                  = link_to image_tag("/images/no_image.jpg", alt: "アイコン", width: "70px"), user_path(comment.user)
+                
+                %p.sender_name
+                  = "#{comment.user.nickname}"
+              
+                .delete_button
                   - if current_user.id == comment.user.id
-                    %br
-                      = button_to 'コメント削除', "/posts/#{comment.post.id}/comments/#{comment.id}", method: :delete, data: { confirm: 'コメントを削除してよろしいですか？' }
+                    = button_to '削除', "/posts/#{comment.post.id}/comments/#{comment.id}", method: :delete, data: { confirm: 'コメントを削除してよろしいですか？' }
+                  .send_date
+                    = comment.created_at.strftime("%Y/%m/%d %H:%M")
 
         .pages
           = paginate(@comments)
