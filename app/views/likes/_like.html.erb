@@ -1,11 +1,4 @@
-<%# -# -if current_user.already_liked?(posts)
--#   = button_to post_like_path(posts), class:"like_selsect", method: :delete, remote: true do
--#     %i.like.fas.fa-heart
--#     = "#{posts.likes.count}　　#{posts.shopname}"
--# -else
--#   = button_to post_likes_path(posts), class:"like_selsect",remote: true do
--#     %i.dislike.far.fa-heart
--#     = "#{posts.likes.count}　　#{posts.shopname}"
+
 
 
 .like-link{:id => "like-link-#{post.id}"}

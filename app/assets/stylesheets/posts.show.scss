@@ -39,18 +39,7 @@
         font-size: 20px;
         font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
         padding: 12px;
-        .post__likes{
-          .like-link{
-            .iine__button{
-              line-height: 42px;
-              color: #6d3701;
-              font-size: 18px;
-              display: inline-block;
-              padding: 0 18px;
-              border-radius: 100px;
-              font-weight: bold;
-            }
-          }
+        &__likes{
           .button_to{
             display: inline-block;
             button{
