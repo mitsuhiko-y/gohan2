@@ -202,13 +202,17 @@
               width: 23%;
             }
           }
+          tr:hover{
+            background: darkgray;
+            opacity: 0.8;
+          }
         }
       }  
     }
     .pages{
       margin-top: 50px;
       .pagination{
-        justify-content: center;
+        text-align: center;
         span{
           margin-right: 20px;
           font-size: 18px;
